@@ -129,11 +129,6 @@ export default function Contact() {
                                         onSubmit={handleSubmit}
                                     >
                                         <input type="hidden" name="form-name" value="contact" />
-                                        <p className="hidden">
-                                            <label>
-                                                Don’t fill this out if you’re human: <input name="bot-field" />
-                                            </label>
-                                        </p>
                                         <input type="hidden" name="subject" value="New Inquiry from PRISMMath Website" />
 
                                         <div>
