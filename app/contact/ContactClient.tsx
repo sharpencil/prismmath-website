@@ -88,19 +88,7 @@ export default function Contact() {
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent to-primary"></div>
                             <h3 className="text-2xl font-serif font-bold text-primary mb-6">Service Area</h3>
 
-                            <div className="flex-grow w-full rounded-xl overflow-hidden border border-gray-200 min-h-[400px] relative">
-                                <iframe
-                                    src="https://maps.google.com/maps?ll=30.450375,-97.795853&z=13&t=m&hl=en-US&gl=US&mapclient=embed&output=embed"
-                                    width="100%"
-                                    height="100%"
-                                    className="absolute inset-0 border-0"
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
-
-                            <div className="mt-6 space-y-2">
+                            <div className="mb-6 space-y-2">
                                 <div className="flex items-start gap-3 text-gray-600">
                                     <MapPin className="text-accent mt-1 flex-shrink-0" size={20} />
                                     <div>
@@ -111,6 +99,18 @@ export default function Contact() {
                                 <p className="text-xs text-gray-400 italic pl-8">
                                     ~20 mile radius service area
                                 </p>
+                            </div>
+
+                            <div className="flex-grow w-full rounded-xl overflow-hidden border border-gray-200 min-h-[400px] relative">
+                                <iframe
+                                    src="https://maps.google.com/maps?ll=30.450375,-97.795853&z=13&t=m&hl=en-US&gl=US&mapclient=embed&output=embed"
+                                    width="100%"
+                                    height="100%"
+                                    className="absolute inset-0 border-0"
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
                             </div>
                         </motion.div>
 
@@ -158,17 +158,44 @@ export default function Contact() {
                                         <input type="hidden" name="subject" value="New Inquiry from PRISMMath Website" />
 
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">Parent Name</label>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">Parent Name <span className="text-red-500">*</span></label>
                                             <input required name="parentName" type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Jane Doe" />
                                         </div>
 
-                                        <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">Student Grade Level</label>
-                                            <input required name="studentGradeLevel" type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="e.g. 8th Grade" />
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-2">Parent Email <span className="text-red-500">*</span></label>
+                                                <input required name="parentEmail" type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="jane@example.com" />
+                                            </div>
+                                            <div>
+                                                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number <span className="text-gray-400 text-xs font-normal">(Optional)</span></label>
+                                                <input name="phoneNumber" type="tel" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="(555) 123-4567" />
+                                            </div>
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">Subject Area of Interest</label>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">Student Grade Level <span className="text-red-500">*</span></label>
+                                            <div className="relative">
+                                                <select name="studentGradeLevel" defaultValue="5th Grade" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all bg-white appearance-none cursor-pointer">
+                                                    <option value="" disabled>Select an option</option>
+                                                    {Array.from({ length: 11 }, (_, i) => i + 2).map((grade) => (
+                                                        <option key={grade} value={`${grade}th Grade`}>{grade}th Grade</option>
+                                                    ))}
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                                                    <ChevronDown size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">Current School <span className="text-gray-400 text-xs font-normal">(Optional)</span></label>
+                                            <input name="currentSchool" type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="e.g., Canyon Vista MS or Home School" />
+                                        </div>
+
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">Subject Area of Interest <span className="text-red-500">*</span></label>
                                             <div className="relative">
                                                 <select name="subjectArea" defaultValue="Pre-Algebra" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all bg-white appearance-none cursor-pointer">
                                                     <option>Elementary School Mathematics</option>
@@ -189,8 +216,24 @@ export default function Contact() {
                                         </div>
 
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-2">Academic Aspirations</label>
-                                            <textarea required name="academicAspirations" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Tell us where your student is now and where they want to go. (e.g., &quot;Currently in 7th grade, looking for a challenge beyond the school curriculum&quot; or &quot;Aiming for a top score on the Digital SAT.&quot;)"></textarea>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">How did you find us? <span className="text-red-500">*</span></label>
+                                            <div className="relative">
+                                                <select name="referralSource" defaultValue="" required className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all bg-white appearance-none cursor-pointer">
+                                                    <option value="" disabled>Select an option</option>
+                                                    <option value="Referral">Referral</option>
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Search Engine">Search Engine</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                                                    <ChevronDown size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-2">Academic Aspirations <span className="text-gray-400 text-xs font-normal">(Optional)</span></label>
+                                            <textarea name="academicAspirations" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Tell us where your student is now and where they want to go. (e.g., &quot;Currently in 7th grade, looking for a challenge beyond the school curriculum&quot; or &quot;Aiming for a top score on the Digital SAT.&quot;)"></textarea>
                                         </div>
 
                                         <button

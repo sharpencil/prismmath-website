@@ -26,8 +26,8 @@ export default function Founder() {
                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
-                            {/* Face concealment overlay - significant dark opacity from Bottom Right */}
-                            <div className="absolute inset-0 bg-gradient-to-tl from-gray-950 via-gray-900/95 via-35% to-transparent/5"></div>
+                            {/* Face concealment overlay - significant dark opacity from Top Left */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900/95 via-35% to-transparent/5"></div>
                             <div className="absolute bottom-4 left-4">
                                 <p className="font-bold text-lg">Dr. Young Ryu</p>
                                 <p className="text-accent text-sm">Founder & Head Instructor</p>
@@ -61,7 +61,7 @@ export default function Founder() {
                             transition={{ delay: 0.3 }}
                             className="text-gray-300 text-lg leading-relaxed max-w-3xl"
                         >
-                            As a former Professor of Industrial Engineering with a background in Human Factors Engineering, I’ve spent my career studying how humans process complex systems. When my children entered the Austin school system, I realized that even the best local schools were focused on rote arithmetic rather than the 'University Operating System' logic needed for elite STEM tracks. I began developing the PRISMMath curriculum at my kitchen table for my own elementary and middle schoolers. Today, I lead on-demand group cohorts, teaching my children and their friends (mostly Spicewood Elementary, Canyon Vista Middle, and Westwood High schoolers) the same principles used at top-tier universities to ensure they don't just survive math—they master it.
+                            Dr. Young Ryu is a former Tenure-Track Professor of Industrial and Systems Engineering. Having taught university-level Probability and Statistics for seven years, he understands the exact cognitive leap students must make to succeed in top-tier STEM environments. When his own children entered the Austin school system, he realized that even in premier schools like Spicewood Elementary and Canyon Vista Middle, the focus remained on rote arithmetic rather than the structural logic used at universities. What began as a personal curriculum developed for his own children and their Westwood High peers has evolved into PRISMMath Academy—a specialized lab where students master the 'University Operating System' of mathematics.
                         </motion.p>
 
                         <motion.p
