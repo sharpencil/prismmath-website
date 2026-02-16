@@ -16,10 +16,19 @@ export default function Contact() {
         const formData = new FormData(myForm);
         const data = new URLSearchParams();
 
-        // manually build URLSearchParams to ensure everything is clean
+        // Manually append fields to ensure control
+        data.append("form-name", "contact");
+        data.append("subject", "New Inquiry from PRISMMath Website");
+
+        // Append other fields from FormData
         for (const pair of formData.entries()) {
-            data.append(pair[0], pair[1] as string);
+            // Skip the hidden fields we just manually added to avoid duplicates if they exist
+            if (pair[0] !== "form-name" && pair[0] !== "subject") {
+                data.append(pair[0], pair[1] as string);
+            }
         }
+
+        console.log("Submitting form data:", data.toString());
 
         fetch("/", {
             method: "POST",
