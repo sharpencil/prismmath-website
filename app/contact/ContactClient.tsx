@@ -8,9 +8,12 @@ import { MapPin, Phone, Mail, HelpCircle, Wrench, ChevronDown, CheckCircle } fro
 
 export default function Contact() {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setIsLoading(true);
+        console.log("Form submission started");
 
         const myForm = e.currentTarget;
         const formData = new FormData(myForm);
@@ -28,21 +31,27 @@ export default function Contact() {
             }
         }
 
-        console.log("Submitting form data:", data.toString());
+        const payload = data.toString();
+        console.log("Submitting payload:", payload);
 
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: data.toString(),
+            body: payload,
         })
             .then((response) => {
+                console.log("Response status:", response.status);
                 if (response.ok) {
                     setIsSubmitted(true);
                 } else {
-                    alert("Form submission failed. Please try again.");
+                    alert(`Form submission failed with status: ${response.status}. Please try again.`);
                 }
             })
-            .catch((error) => alert(error));
+            .catch((error) => {
+                console.error("Submission error:", error);
+                alert(`Error: ${error}`);
+            })
+            .finally(() => setIsLoading(false));
     };
 
     return (
@@ -182,8 +191,12 @@ export default function Contact() {
                                             <textarea required name="academicAspirations" rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-accent focus:border-transparent outline-none transition-all" placeholder="Tell us where your student is now and where they want to go. (e.g., &quot;Currently in 7th grade, looking for a challenge beyond the school curriculum&quot; or &quot;Aiming for a top score on the Digital SAT.&quot;)"></textarea>
                                         </div>
 
-                                        <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                                            Submit Inquiry
+                                        <button
+                                            type="submit"
+                                            disabled={isLoading}
+                                            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        >
+                                            {isLoading ? "Submitting Inquiry..." : "Submit Inquiry"}
                                         </button>
                                     </form>                                </>
                             )}
