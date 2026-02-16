@@ -34,7 +34,9 @@ export default function Contact() {
         const payload = data.toString();
         console.log("Submitting payload:", payload);
 
-        fetch("/", {
+        // Submit to the static forms file to ensure it hits the Netlify Edge handler
+        // instead of the Next.js server function.
+        fetch("/_forms.html", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: payload,
