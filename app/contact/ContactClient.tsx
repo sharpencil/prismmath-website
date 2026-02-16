@@ -20,7 +20,13 @@ export default function Contact() {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData as any).toString(),
         })
-            .then(() => setIsSubmitted(true))
+            .then((response) => {
+                if (response.ok) {
+                    setIsSubmitted(true);
+                } else {
+                    alert("Form submission failed. Please try again.");
+                }
+            })
             .catch((error) => alert(error));
     };
 
