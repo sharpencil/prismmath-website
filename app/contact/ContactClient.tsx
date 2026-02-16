@@ -14,11 +14,17 @@ export default function Contact() {
 
         const myForm = e.currentTarget;
         const formData = new FormData(myForm);
+        const data = new URLSearchParams();
+
+        // manually build URLSearchParams to ensure everything is clean
+        for (const pair of formData.entries()) {
+            data.append(pair[0], pair[1] as string);
+        }
 
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData as any).toString(),
+            body: data.toString(),
         })
             .then((response) => {
                 if (response.ok) {
