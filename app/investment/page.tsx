@@ -22,8 +22,11 @@ export default function InvestmentPage() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-accent">STEM Excellence.</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
+                    <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed mb-4">
                         University-standard instruction engineered for the ambitious student.
+                    </p>
+                    <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+                        Flexible enrollment based on your student’s unique academic roadmap.
                     </p>
                 </div>
 
@@ -92,6 +95,15 @@ export default function InvestmentPage() {
                         </p>
                     </div>
 
+                    {/* How It Works - Defining The Track */}
+                    <div className="max-w-3xl mx-auto bg-blue-50/50 border border-blue-100 rounded-2xl p-6 md:p-8 mb-12 shadow-sm text-center">
+                        <h3 className="text-xl font-bold text-blue-900 mb-3">Defining 'The Track'</h3>
+                        <p className="text-slate-700 leading-relaxed text-sm md:text-base">
+                            A <strong className="text-slate-900">Track</strong> consists of one 1.5-hour weekly Logic Lab (6 hours of PhD-led instruction per month).
+                            Students may enroll in a single track (e.g., Algebra 1) or multiple tracks (e.g., Geometry + Competitive Logic) depending on their goals.
+                        </p>
+                    </div>
+
                     <div className="grid md:grid-cols-2 gap-8 items-stretch justify-center max-w-4xl mx-auto">
 
                         {/* Anchor Pricing (Standard) */}
@@ -102,7 +114,7 @@ export default function InvestmentPage() {
 
                                 <div className="mb-8">
                                     <span className="text-4xl font-bold text-primary">$200</span>
-                                    <span className="text-slate-500 font-medium"> / Month</span>
+                                    <span className="text-slate-500 font-medium"> / Month per track</span>
                                 </div>
 
                                 <ul className="space-y-4 mb-8">
@@ -112,7 +124,11 @@ export default function InvestmentPage() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
-                                        <span className="text-slate-600 text-sm">Comprehensive curriculum</span>
+                                        <span className="text-slate-600 text-sm">1.5-hour weekly sessions</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
+                                        <span className="text-slate-600 text-sm">University-standard curriculum</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
@@ -136,14 +152,17 @@ export default function InvestmentPage() {
                                 </p>
 
                                 <div className="mb-8">
-                                    <div className="flex items-end gap-2 mb-2">
+                                    <div className="flex items-end gap-2 mb-3">
                                         <span className="text-5xl font-bold text-primary">$150</span>
-                                        <span className="text-slate-500 font-medium mb-1"> / Month</span>
+                                        <span className="text-slate-500 font-medium mb-1.5"> / Month per track</span>
                                     </div>
-                                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-md">
-                                        <ShieldCheck className="w-3.5 h-3.5" />
-                                        Lifetime Rate Lock: Secure this finding price for as long as enrolled.
+                                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-md mb-2 w-full">
+                                        <ShieldCheck className="w-4 h-4 shrink-0" />
+                                        <span>Lifetime rate lock for founding families.</span>
                                     </div>
+                                    <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        Enroll in any track now at the founding rate and maintain this pricing for the duration of your student's journey at PrismMath.
+                                    </p>
                                 </div>
 
                                 <ul className="space-y-4 mb-8">
@@ -175,6 +194,14 @@ export default function InvestmentPage() {
                             </div>
                         </div>
                     </div>
+
+                    {/* Multi-Track Advantage */}
+                    <div className="mt-16 max-w-3xl mx-auto border-t border-slate-200 pt-12">
+                        <h4 className="text-lg font-bold text-primary mb-3 text-center md:text-left">The 'Multi-Track' Advantage</h4>
+                        <p className="text-slate-600 leading-relaxed text-sm md:text-base text-center md:text-left">
+                            For ambitious students seeking both vertical rigor (GPA Mastery) and lateral depth (Competitive Logic), enrolling in dual tracks provides a comprehensive university-track foundation.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -199,6 +226,6 @@ export default function InvestmentPage() {
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }

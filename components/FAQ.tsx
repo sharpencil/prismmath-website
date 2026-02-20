@@ -18,8 +18,16 @@ const faqs = [
         answer: "Yes. Often, 'struggling' students are simply missing the visual frameworks to understand abstract concepts. Our Principle-First method rebuilds confidence by providing those missing mental models."
     },
     {
+        question: "Is this program suitable for students struggling with math?",
+        answer: "Yes. Often, 'struggling' students are simply missing the visual frameworks to understand abstract concepts. Our Principle-First method rebuilds confidence by providing those missing mental models."
+    },
+    {
         question: "What is the class size?",
         answer: "We maintain strictly small cohorts (max 6-8 students) to ensure every student receives personal architectural review of their work."
+    },
+    {
+        question: "Can my student take more than one course?",
+        answer: "Yes. Many of our Professional Elite students choose to pair a core Honors track (like Algebra 2) with a performance track (like SAT Prep or Competitive Logic). Each track is billed separately as a 1.5-hour weekly session."
     }
 ];
 
