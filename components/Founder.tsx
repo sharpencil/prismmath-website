@@ -61,7 +61,7 @@ export default function Founder() {
                             transition={{ delay: 0.3 }}
                             className="text-gray-300 text-lg leading-relaxed max-w-3xl"
                         >
-                            Dr. Young Ryu is a former Tenure-Track Professor of Industrial and Systems Engineering. Having taught university-level Probability and Statistics for seven years, he understands the exact cognitive leap students must make to succeed in top-tier STEM environments. When his own children entered the Austin school system, he realized that even in premier schools like Spicewood Elementary and Canyon Vista Middle, the focus remained on rote arithmetic rather than the structural logic used at universities. What began as a personal curriculum developed for his own children and their Westwood High peers has evolved into PRISMMath Academy—a specialized lab where students master the 'University Operating System' of mathematics.
+                            Dr. Young Ryu is a former Tenure-Track Professor of Industrial and Systems Engineering. Having taught university-level Probability and Statistics for seven years, he understands the exact cognitive leap students must make to succeed in top-tier STEM environments. When his own children entered the Austin school system, he realized that even in premier schools, the focus remained on rote arithmetic rather than the structural logic used at universities. What began as a personal curriculum developed for his own children and their peers has evolved into PRISMMath Academy—a specialized lab where students master the 'University Operating System' of mathematics.
                         </motion.p>
 
                         <motion.p
