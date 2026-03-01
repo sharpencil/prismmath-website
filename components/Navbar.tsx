@@ -25,6 +25,7 @@ export default function Navbar() {
         { name: 'Programs', href: '/programs' },
         { name: 'About', href: '/about' },
         { name: 'Investment', href: '/investment' },
+        { name: '한국어', href: '/korean' },
     ];
 
     return (
