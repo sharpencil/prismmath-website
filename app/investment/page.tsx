@@ -99,7 +99,7 @@ export default function InvestmentPage() {
                     <div className="max-w-3xl mx-auto bg-blue-50/50 border border-blue-100 rounded-2xl p-6 md:p-8 mb-12 shadow-sm text-center">
                         <h3 className="text-xl font-bold text-blue-900 mb-3">Defining 'The Track'</h3>
                         <p className="text-slate-700 leading-relaxed text-sm md:text-base">
-                            A <strong className="text-slate-900">Track</strong> consists of one 1.5-hour weekly Logic Lab (6 hours of PhD-led instruction per month).
+                            A <strong className="text-slate-900">Track</strong> consists of one 1.5-hour weekly Logic Lab (6 hours of instruction per month).
                             Students may enroll in a single track (e.g., Algebra 1) or multiple tracks (e.g., Geometry + Competitive Logic) depending on their goals.
                         </p>
                     </div>

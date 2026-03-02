@@ -24,8 +24,8 @@ export default function KoreanClient() {
                                 오스틴 북서부 프리미엄 수학 랩
                             </div>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-                                수학 조기 정복, <br />
-                                <span className="text-accent">입시를 주도하라</span>
+                                수학 조기 완성,<br />
+                                <span className="text-accent">입시의 여유</span>
                             </h1>
                             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mb-8">
                                 패턴 암기가 아닌, 원리를 관통하는 수학. 전직 공대 교수 Dr. Ryu가 직접 설계한 'University-Track' 로드맵
@@ -91,16 +91,16 @@ export default function KoreanClient() {
                                 안녕하십니까. PRISMMath Academy 원장 류영(Young Ryu, PhD)입니다.
                             </p>
                             <p>
-                                제 첫째 아이가 중학교 진학을 앞두고 수학 교육을 고민하며 오스틴의 많은 학원과 튜터를 알아보았습니다. 하지만 제 기준에 차는 곳을 찾기란 쉽지 않았습니다. 비용은 높았지만 커리큘럼은 단편적이었고, 교재의 수준이나 강사의 전문성은 명문대 진학을 뒷받침하기에 부족해 보였습니다. &quot;마땅히 보낼 곳이 없다면, 내가 직접 내 아이와 그 친구들을 위해 최고의 환경을 만들자&quot;는 결심, 그것이 PRISMMath Academy의 시작입니다.
+                                제 첫째 아이가 중학교 진학을 앞두고 수학 교육을 고민하며 오스틴의 많은 학원과 튜터를 알아보았습니다. 하지만 제 기준에 차는 곳을 찾기란 쉽지 않았습니다. 비용은 높았지만 커리큘럼은 단편적이었고, 교재의 수준이나 강사의 전문성은 명문대 진학을 뒷받침하기에 부족해 보였습니다. 그래서 제가 직접 우리 아이와 그 친구들을 위해 최고의 환경을 만들자는 결심, 그것이 PRISMMath Academy의 시작입니다.
                             </p>
                             <p>
-                                저는 한국의 치열한 입시 현장을 경험하고 성공적으로 살아남았고, 카이스트에서 6년 동안 이공계 엘리트들이 어떻게 사고하고 문제를 해결하는지 몸소 겪었습니다. 또한 미국에서 박사 학위를 받고 대학 강단에서 수년간 공대생들을 위한 확률통계과목과 그 응용과목들을 가르쳤습니다. 한국 수학의 강점인 &apos;탄탄한 기초&apos;와 미국 수학의 핵심인 &apos;논리적 응용&apos;을 모두 섭렵한 경험을 바탕으로, 오스틴 한인 학부모님들의 갈증을 해결할 효과적인 수학 교육 솔루션을 제시합니다.
+                                저는 한국의 치열한 입시 현장을 성공적으로 헤쳐 나왔고, 카이스트에서 6년 동안 이공계 엘리트들이 어떻게 사고하고 문제를 해결하는지 몸소 겪었습니다. 또한 미국에서 박사 학위를 받고 대학 강단에서 수년간 공대생들을 위한 확률통계 과목과 그 응용 과목들을 가르쳤습니다. 한국 수학의 강점인 &apos;탄탄한 기초&apos;와 미국 수학의 핵심인 &apos;논리적 응용&apos;을 모두 섭렵한 경험을 바탕으로, 오스틴 한인 학부모님들의 갈증을 해결할 효과적인 수학 교육 솔루션을 제시합니다.
                             </p>
 
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">1. PRISMMath의 철학: &quot;패턴 암기가 아닌, 원리 관통을 통한 무한한 응용력&quot;</h3>
                                 <p className="mb-2">
-                                    대부분의 학원은 수많은 문제를 풀게 하여 비슷한 패턴이 나오기를 기대하는 &apos;양치기식&apos; 공부에 의존합니다. 하지만 이런 방식은 처음 보는 유형이나 고난도 심화 문제 앞에서 무너질 수밖에 없습니다.
+                                    대부분의 입시수학 교육은 수많은 문제를 풀게 하여 비슷한 패턴이 나오기를 기대하는 &apos;양치기식&apos; 공부에 의존합니다. 하지만 이런 방식은 처음 보는 유형이나 고난도 심화 문제 앞에서 무너질 수밖에 없습니다.
                                 </p>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li><strong>원리를 꿰뚫는 이해:</strong> 저는 수백 문제를 푸는 것보다, 단 한 문제를 풀더라도 그 밑바닥에 흐르는 수학적 원리를 완벽하게 해부하는 데 중점을 둡니다.</li>
@@ -109,33 +109,32 @@ export default function KoreanClient() {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대(STEM) 진학을 위한 &apos;University Operating System&apos;</h3>
+                                <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대 진학을 위한 &apos;University Operating System&apos;</h3>
                                 <p>
-                                    단순한 계산 기술은 고등수학에서 한계를 드러냅니다. 저희는 Larson과 Stewart 등 실제 미국 명문 공대에서 사용하는 원서 교재를 기반으로 &apos;대학 수준의 사고 체계&apos;를 구축합니다. 이는 공립학교 교육의 한계를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 오스틴 내에서 지도 가능한 전문가를 찾기 힘든 AP Statistics까지 완벽하게 커버하며 입시의 차별화된 변별력을 만들어냅니다.
+                                    저희는 Larson과 Stewart 등 실제 미국 명문 공대에서 사용하는 원서 교재를 기반으로 &apos;대학 수준의 사고 체계&apos;를 구축합니다. 이는 공립학교 교육의 한계를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 오스틴 내에서 지도 가능한 전문가를 찾기 힘든 AP Statistics까지 완벽하게 커버하며 입시의 차별화된 변별력을 만들어냅니다.
                                 </p>
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-2">3. 주재원 자녀를 위한 특별 트랙: &apos;실력 정석&apos;을 통한 압도적 심화와 한국 입시 대비</h3>
+                                <h3 className="text-xl font-bold text-primary mb-2">3. 단기 주재원 자녀를 위한 특별 트랙: &apos;실력 정석&apos;을 통한 압도적 심화와 한국 입시 대비</h3>
                                 <p className="mb-2">
-                                    한국 귀국 및 한국 대학 입시를 준비하거나, 미국 입시에서도 최상위권의 수학적 깊이를 증명하려는 학생들을 위해 &apos;실력 정석&apos; 과정을 운영합니다. 언제적 실력정석이냐? 하는 물음이 생길수도 있지만 지금도 강남 대치동의 학원가에서는 최상위 학생들을 위해 &apos;실력 정석&apos;반을 운영하는 것이 현실입니다.
+                                    한국 귀국 및 한국 대학 입시를 준비하는 학생들을 위해 &apos;실력 정석&apos; 과정을 운영합니다. 언제적 실력 정석이냐? 하는 물음이 생길 수도 있지만 지금도 강남 대치동의 학원가에서는 최상위 학생들을 위해 &apos;실력 정석&apos;을 가르치고 있습니다.
                                 </p>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li><strong>박사의 시각으로 해체하는 정석:</strong> &apos;실력 정석&apos;은 선행 독학이 거의 불가능한 교재입니다. 저는 공학 박사의 시각으로 정석의 복잡한 원리를 논리적으로 해체하여 학생들에게 전수합니다.</li>
-                                    <li><strong>전략적 선행의 힘:</strong> 저 또한 고교 시절 훌륭한 방과후 학원 선생님을 만나 고2 여름방학 전 이과 수학 전 과정을 마스터했습니다. 수학을 조기에 정복하며 얻은 시간적, 심리적 여유는 명문대 합격의 결정적 토대가 되었습니다. 우리 아이들에게도 이 &apos;전략적 승리&apos;의 경험을 물려주고 싶습니다.</li>
+                                    <li><strong>전략적 선행의 힘:</strong> 저 또한 고교 시절 아주 훌륭한 방과 후 학원 선생님을 만나 고2 여름방학 전 이과 수학 전 과정을 마스터했습니다. 수학을 조기에 정복하며 얻은 시간적, 심리적 여유는 명문대 합격의 결정적 토대가 되었습니다. 우리 아이들에게도 이 &apos;전략적 승리&apos;의 경험을 물려주고 싶습니다.</li>
                                 </ul>
                             </div>
 
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">4. 이중 언어(Bilingual) 수업: 논리의 깊이와 용어의 완벽한 결합</h3>
                                 <p>
-                                    수학은 언어가 아닌 논리입니다. 추상적인 고차원 개념은 한국어로 정확하고 깊이 있게 설명하여 100% 이해시키고, 문제 풀이와 용어 적용은 미국 대학 표준에 맞춘 영어로 진행합니다. 언어 때문에 수학적 본질을 놓치는 일 없이, 두 언어의 장점만을 극대화합니다.
+                                    수학은 언어가 아닌 논리입니다. 메인 트랙의 경우 영어 수업이 기본이지만, 필요한 경우에 추상적인 고차원 개념은 한국어로 정확하고 깊이 있게 설명하여 100% 이해시킬 수 있습니다. 언어 때문에 수학적 본질을 놓치는 일 없이, 두 언어의 장점만을 극대화합니다.
                                 </p>
                             </div>
 
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">5. 독보적 가치와 합리적 투자</h3>
-                                <p className="mb-2">박사급 직강임에도 불구하고, PRISMMath는 교육의 문턱을 낮추었습니다.</p>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li><strong>합리적 비용:</strong> 월 $200 수준(Investment 메뉴 참조)의 비용은 일반 프랜차이즈 학원과 비슷하거나 오히려 더 저렴하며, 교육의 질은 비교할 수 없습니다.</li>
                                     <li><strong>미래를 위한 경제적 선택:</strong> 중고교 시절의 시행착오를 줄여 수학을 조기에 마스터하게 하는 것이 가장 경제적이고 확실한 투자입니다.</li>
@@ -234,7 +233,7 @@ export default function KoreanClient() {
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                    <span className="text-slate-600">오스틴 북서부(Northwest Austin)에 위치한 쾌적한 학습 환경</span>
+                                    <span className="text-slate-600">오스틴 북서부(Northwest Austin)에 위치한 학습 환경</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
