@@ -30,7 +30,7 @@ export default function KoreanClient() {
                             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl mb-8">
                                 패턴 암기가 아닌, 원리를 관통하는 수학. 전직 공대 교수 Dr. Ryu가 직접 설계한 'University-Track' 로드맵
                                 <br /><br />
-                                <span className="font-semibold text-white">미국 명문대 STEM 진학부터 한국식 '실력 정석' 심화까지, 오스틴 북서부 상위권 한인학생들을 위한 전략적 수학 파트너</span>
+                                <span className="font-semibold text-white">미국 명문대 STEM 진학부터 한국식 '실력 정석' 심화까지, 오스틴 북서부 상위권 한인학생들을 위한 전략적 수학 교육 파트너</span>
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
@@ -94,7 +94,7 @@ export default function KoreanClient() {
                                 제 첫째 아이가 중학교 진학을 앞두고 수학 교육을 고민하며 오스틴의 많은 학원과 튜터를 알아보았습니다. 하지만 제 기준에 차는 곳을 찾기란 쉽지 않았습니다. 비용은 높았지만 커리큘럼은 단편적이었고, 교재의 수준이나 강사의 전문성은 명문대 진학을 뒷받침하기에 부족해 보였습니다. &quot;마땅히 보낼 곳이 없다면, 내가 직접 내 아이와 그 친구들을 위해 최고의 환경을 만들자&quot;는 결심, 그것이 PRISMMath Academy의 시작입니다.
                             </p>
                             <p>
-                                저는 한국의 치열한 입시 현장을 경험하고 성공적으로 살아남았고, 카이스트에서 6년 동안 이공계 엘리트들이 어떻게 사고하고 문제를 해결하는지 몸소 겪었습니다. 또한 미국에서 박사 학위를 받고 대학 강단에서 수년간 공대생들을 위한 확률통계과목과 그 응용과목들을 가르쳤습니다. 한국 수학의 강점인 &apos;탄탄한 기초&apos;와 미국 수학의 핵심인 &apos;논리적 응용&apos;을 모두 섭렵한 전문가로서, 오스틴 한인 학부모님들의 갈증을 해결할 명확한 솔루션을 제시합니다.
+                                저는 한국의 치열한 입시 현장을 경험하고 성공적으로 살아남았고, 카이스트에서 6년 동안 이공계 엘리트들이 어떻게 사고하고 문제를 해결하는지 몸소 겪었습니다. 또한 미국에서 박사 학위를 받고 대학 강단에서 수년간 공대생들을 위한 확률통계과목과 그 응용과목들을 가르쳤습니다. 한국 수학의 강점인 &apos;탄탄한 기초&apos;와 미국 수학의 핵심인 &apos;논리적 응용&apos;을 모두 섭렵한 경험을 바탕으로, 오스틴 한인 학부모님들의 갈증을 해결할 효과적인 수학 교육 솔루션을 제시합니다.
                             </p>
 
                             <div>
@@ -116,7 +116,7 @@ export default function KoreanClient() {
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-2">3. 특별 트랙: &apos;실력 정석&apos;을 통한 압도적 심화와 한국 입시 대비</h3>
+                                <h3 className="text-xl font-bold text-primary mb-2">3. 주재원 자녀를 위한 특별 트랙: &apos;실력 정석&apos;을 통한 압도적 심화와 한국 입시 대비</h3>
                                 <p className="mb-2">
                                     한국 귀국 및 한국 대학 입시를 준비하거나, 미국 입시에서도 최상위권의 수학적 깊이를 증명하려는 학생들을 위해 &apos;실력 정석&apos; 과정을 운영합니다. 언제적 실력정석이냐? 하는 물음이 생길수도 있지만 지금도 강남 대치동의 학원가에서는 최상위 학생들을 위해 &apos;실력 정석&apos;반을 운영하는 것이 현실입니다.
                                 </p>
