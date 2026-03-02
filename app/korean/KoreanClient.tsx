@@ -137,7 +137,7 @@ export default function KoreanClient() {
                                 <h3 className="text-xl font-bold text-primary mb-2">5. 독보적 가치와 합리적 투자</h3>
                                 <p className="mb-2">박사급 직강임에도 불구하고, PRISMMath는 교육의 문턱을 낮추었습니다.</p>
                                 <ul className="list-disc pl-5 space-y-2">
-                                    <li><strong>합리적 비용:</strong> 월 $200 수준(Investment 메뉴 참조)의 비용은 일반 대학생 아르바이트나 프랜차이즈 학원과 비슷하거나 오히려 더 저렴하며, 교육의 질은 비교할 수 없습니다.</li>
+                                    <li><strong>합리적 비용:</strong> 월 $200 수준(Investment 메뉴 참조)의 비용은 일반 프랜차이즈 학원과 비슷하거나 오히려 더 저렴하며, 교육의 질은 비교할 수 없습니다.</li>
                                     <li><strong>미래를 위한 경제적 선택:</strong> 중고교 시절의 시행착오를 줄여 수학을 조기에 마스터하게 하는 것이 가장 경제적이고 확실한 투자입니다.</li>
                                 </ul>
                             </div>
@@ -257,7 +257,7 @@ export default function KoreanClient() {
                             </h2>
                             <p className="text-slate-300 text-lg leading-relaxed">
                                 시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 실제 대학과 명문 고등학교에서 채택하는
-                                Larson Algebra, Stewart Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다.
+                                Larson Algebra, Stewart Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
@@ -271,26 +271,40 @@ export default function KoreanClient() {
                             </ul>
                         </div>
 
-                        <div className="relative">
-                            <div className="grid grid-cols-2 gap-4">
-                                <motion.div
-                                    className="relative h-64 rounded-xl overflow-hidden shadow-2xl"
-                                    whileHover={{ y: -10 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <Image src="/images/textbooks/larson-intermediate-algebra.jpg" alt="Larson Algebra" fill className="object-cover" />
-                                    <div className="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors"></div>
-                                </motion.div>
-                                <motion.div
-                                    className="relative h-64 rounded-xl overflow-hidden shadow-2xl translate-y-8"
-                                    whileHover={{ y: 22 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <Image src="/images/textbooks/stewart-calculus.jpg" alt="Stewart Calculus" fill className="object-cover" />
-                                    <div className="absolute inset-0 bg-black/20 hover:bg-transparent transition-colors"></div>
-                                </motion.div>
+                        <div className="relative mt-8 md:mt-0">
+                            <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
+                                {[
+                                    { title: "Dimensions Math 6A/6B", image: "/images/textbooks/dimensions-math-6a-6b.jpg" },
+                                    { title: "Elementary Algebra", image: "/images/textbooks/larson-elementary-algebra.jpg" },
+                                    { title: "Intermediate Algebra", image: "/images/textbooks/larson-intermediate-algebra.jpg" },
+                                    { title: "Geometry", image: "/images/textbooks/jacobs-geometry.jpg" },
+                                    { title: "Precalculus with Limits", image: "/images/textbooks/larson-precalculus.jpg" },
+                                    { title: "Calculus", image: "/images/textbooks/stewart-calculus.jpg" },
+                                    { title: "The Practice of Statistics", image: "/images/textbooks/practice-of-statistics.jpg" },
+                                    { title: "AoPS Vol 2", image: "/images/textbooks/aops-vol2.jpg" },
+                                    { title: "1600.io SAT Math", image: "/images/textbooks/1600io-sat-math.jpg" },
+                                    { title: "PWN the SAT", image: "/images/textbooks/pwn-sat.jpg" },
+                                ].map((book, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        className="relative w-full aspect-[3/4] rounded-md overflow-hidden shadow-2xl border border-white/10 hover:border-white/40 transition-colors"
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: idx * 0.05, duration: 0.4 }}
+                                        whileHover={{ y: -5, scale: 1.05 }}
+                                    >
+                                        <Image
+                                            src={book.image}
+                                            alt={book.title}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 25vw, 20vw"
+                                        />
+                                    </motion.div>
+                                ))}
                             </div>
-                            <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10"></div>
+                            <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
                         </div>
                     </div>
                 </div>
