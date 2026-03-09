@@ -74,6 +74,16 @@ export default function Programs() {
                                     </li>
                                 </ul>
                             </div>
+
+                            <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                                <div className="w-12 h-16 bg-gray-200 rounded shadow-inner flex-shrink-0 overflow-hidden relative">
+                                    <img src="/images/textbooks/aops-counting.jpg" alt="AoPS Textbooks" className="w-full h-full object-cover" />
+                                </div>
+                                <div>
+                                    <h4 className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">Primary Resource</h4>
+                                    <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Introduction to Counting & Probability and Introduction to Number Theory</p>
+                                </div>
+                            </div>
                         </motion.div>
 
                         {/* High School */}
@@ -99,6 +109,16 @@ export default function Programs() {
                                         <span className="text-slate-700 leading-relaxed">Cultivating <strong className="text-slate-900">'Lateral Depth'</strong>—the ability to connect dispararate mathematical concepts to solve novel problems.</span>
                                     </li>
                                 </ul>
+                            </div>
+
+                            <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                                <div className="w-12 h-16 bg-gray-200 rounded shadow-inner flex-shrink-0 overflow-hidden relative">
+                                    <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Textbooks" className="w-full h-full object-cover" />
+                                </div>
+                                <div>
+                                    <h4 className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Primary Resource</h4>
+                                    <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Volume 1: The Basics and Volume 2: and Beyond</p>
+                                </div>
                             </div>
                         </motion.div>
                     </div>
