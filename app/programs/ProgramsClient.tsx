@@ -76,8 +76,13 @@ export default function Programs() {
                             </div>
 
                             <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="w-12 h-16 bg-gray-200 rounded shadow-inner flex-shrink-0 overflow-hidden relative">
-                                    <img src="/images/textbooks/aops-counting.jpg" alt="AoPS Textbooks" className="w-full h-full object-cover" />
+                                <div className="flex gap-2 shrink-0">
+                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/aops-counting.jpg" alt="AoPS Counting" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/aops-intro-number-theory.gif" alt="AoPS Number Theory" className="w-full h-full object-cover" />
+                                    </div>
                                 </div>
                                 <div>
                                     <h4 className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">Primary Resource</h4>
@@ -112,8 +117,13 @@ export default function Programs() {
                             </div>
 
                             <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="w-12 h-16 bg-gray-200 rounded shadow-inner flex-shrink-0 overflow-hidden relative">
-                                    <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Textbooks" className="w-full h-full object-cover" />
+                                <div className="flex gap-2 shrink-0">
+                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/aops-vol1.jpeg" alt="AoPS Volume 1" className="w-full h-full object-cover" />
+                                    </div>
+                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Volume 2" className="w-full h-full object-cover" />
+                                    </div>
                                 </div>
                                 <div>
                                     <h4 className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Primary Resource</h4>
