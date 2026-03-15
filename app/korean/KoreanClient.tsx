@@ -47,26 +47,26 @@ export default function KoreanClient() {
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden border border-white/10"
+                            className="relative h-[320px] md:h-[420px] w-full max-w-[380px] mx-auto md:ml-auto md:mr-0 rounded-3xl overflow-hidden border border-white/10 shadow-xl"
                         >
                             <div className="absolute inset-0 z-0 bg-primary">
                                 <Image
                                     src="/founder1.png"
                                     alt="Dr. Young Ryu"
                                     fill
-                                    className="object-cover object-center scale-75 origin-center"
+                                    className="object-cover object-center scale-[0.8] origin-center"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                                 {/* Face concealment overlay - significant dark opacity from Top Left */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900/95 via-35% to-transparent/5"></div>
                             </div>
-                            <div className="absolute inset-0 z-10 p-8">
-                                <div className="absolute bottom-8 left-8 text-left">
-                                    <h3 className="text-lg font-bold mb-3 text-white">Dr. Young Ryu</h3>
-                                    <div className="space-y-2 text-gray-200">
-                                        <p><strong className="text-white">카이스트</strong> 학사/석사 (B.S./M.S., KAIST)</p>
-                                        <p><strong className="text-white">버지니아 공대</strong> 박사 (Ph.D., Virginia Tech)</p>
-                                        <p>전 <strong className="text-white">텍사스 주립대</strong>(Texas State) 교수</p>
+                            <div className="absolute inset-0 z-10 p-6">
+                                <div className="absolute bottom-6 left-6 text-left w-full pr-6">
+                                    <h3 className="text-lg font-bold mb-2 text-white">Dr. Young Ryu</h3>
+                                    <div className="space-y-1.5 text-sm md:text-base text-gray-200">
+                                        <p><strong className="text-white">카이스트</strong> 학사/석사 <span className="text-slate-400 block sm:inline sm:ml-1">(B.S./M.S., KAIST)</span></p>
+                                        <p><strong className="text-white">버지니아 공대</strong> 박사 <span className="text-slate-400 block sm:inline sm:ml-1">(Ph.D., Virginia Tech)</span></p>
+                                        <p>전 <strong className="text-white">텍사스 주립대</strong> 교수 <span className="text-slate-400 block sm:inline sm:ml-1">(Texas State)</span></p>
                                     </div>
                                 </div>
                             </div>

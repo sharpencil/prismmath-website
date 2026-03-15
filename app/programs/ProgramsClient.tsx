@@ -45,89 +45,174 @@ export default function Programs() {
                         </div>
                         <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary mb-6">Competitive Logic & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-accent">AMC Prep</span></h2>
                         <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium">
-                            For students who have mastered the standard curriculum and seek higher-order challenges.
+                            To ensure maximal readiness, PRISMMath has moved away from 'subject-based' long-tail courses to a highly compact, <strong className="text-slate-900">18-week contest-based structure.</strong>
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 mb-12">
-                        {/* Middle School */}
+                    <div className="grid md:grid-cols-3 gap-8 mb-12 items-stretch">
+                        {/* COMP-800 */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
                         >
-                            <h3 className="text-2xl font-bold text-primary mb-2">Middle School (Grades 6-8)</h3>
-                            <div className="w-12 h-1 bg-blue-500 rounded-full mb-6"></div>
-                            <p className="text-slate-600 mb-6 font-medium">Focus on the AMC 8 and AMC 10 competitions.</p>
-                            <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100">
-                                <h4 className="font-bold text-blue-900 mb-2">Core Competencies:</h4>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
-                                        <span className="text-slate-700 leading-relaxed"><strong className="text-slate-900">Heuristic Discovery:</strong> Developing intuitive problem-solving strategies outside standard algorithms.</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0"></div>
-                                        <span className="text-slate-700 leading-relaxed"><strong className="text-slate-900">Number Theory:</strong> Mastering concepts routinely excluded from traditional state and school curricula.</span>
-                                    </li>
-                                </ul>
+                            <div className="mb-4">
+                                <span className="inline-block text-xs font-mono font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded mb-2">COMP-800</span>
+                                <h3 className="text-2xl font-bold text-primary">AMC 8 Fast-Track</h3>
+                            </div>
+                            <div className="w-12 h-1 bg-blue-500 rounded-full mb-4"></div>
+                            
+                            <p className="text-slate-600 mb-6 font-medium leading-relaxed">
+                                An elite program transitioning high-performing students to competitive problem-solving heuritsics. Master <strong className="text-blue-600">Structural Logic</strong> to decompose complex problems and build a foundation for future STEM success.
+                            </p>
+
+                            <div className="flex items-center gap-2 mb-6">
+                                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-1 rounded-md">18 Weeks</span>
                             </div>
 
-                            <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="flex gap-2 shrink-0">
-                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
-                                        <img src="/images/textbooks/aops-counting.jpg" alt="AoPS Counting" className="w-full h-full object-cover" />
+                            <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100 flex-grow mb-6">
+                                <h4 className="font-bold text-blue-900 mb-2">Target Goal:</h4>
+                                <p className="text-slate-700 leading-relaxed font-medium">
+                                    High Distinction on AMC 8 / Mathcounts
+                                </p>
+                            </div>
+
+                            <div className="mt-auto pt-4 border-t border-slate-100 space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-16 h-20 shrink-0 bg-gray-200 rounded-md shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/CoverFinal_MasteringAmc8.avif" alt="Mastering AMC 8" className="w-full h-full object-cover" />
                                     </div>
-                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
-                                        <img src="/images/textbooks/aops-intro-number-theory.gif" alt="AoPS Number Theory" className="w-full h-full object-cover" />
+                                    <div>
+                                        <h4 className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">Primary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">Mastering AMC 8 (OmegaLearn)</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">Primary Resource</h4>
-                                    <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Introduction to Counting & Probability and Introduction to Number Theory</p>
+                                <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                    <div className="flex gap-2 shrink-0">
+                                        <div className="w-10 h-14 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/aops-counting.jpg" alt="AoPS Counting" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="w-10 h-14 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/aops-intro-number-theory.gif" alt="AoPS Number Theory" className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Secondary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Introduction to Counting & Probability and Introduction to Number Theory</p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* High School */}
+                        {/* COMP-1000 */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
                         >
-                            <h3 className="text-2xl font-bold text-primary mb-2">High School (Grades 9-12)</h3>
-                            <div className="w-12 h-1 bg-accent rounded-full mb-6"></div>
-                            <p className="text-slate-600 mb-6 font-medium">Focus on the AMC 10/12 and AIME readiness.</p>
-                            <div className="bg-slate-50/80 p-5 rounded-2xl border border-slate-100">
-                                <h4 className="font-bold text-slate-800 mb-2">The Methodology:</h4>
-                                <ul className="space-y-3">
-                                    <li className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div>
-                                        <span className="text-slate-700 leading-relaxed">Utilization of elite <strong className="text-slate-900">Art of Problem Solving (AoPS)</strong> resources.</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0"></div>
-                                        <span className="text-slate-700 leading-relaxed">Cultivating <strong className="text-slate-900">'Lateral Depth'</strong>—the ability to connect dispararate mathematical concepts to solve novel problems.</span>
-                                    </li>
-                                </ul>
+                            <div className="mb-4">
+                                <span className="inline-block text-xs font-mono font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded mb-2">COMP-1000</span>
+                                <h3 className="text-2xl font-bold text-primary">AMC 10/12 Strategy</h3>
+                            </div>
+                            <div className="w-12 h-1 bg-indigo-500 rounded-full mb-4"></div>
+
+                            <p className="text-slate-600 mb-6 font-medium leading-relaxed">
+                                A "Portfolio Closer" for top 2.5% competitors aiming for the <strong className="text-slate-900">AIME</strong>. Focuses on <strong className="text-indigo-600">Computational Dominance</strong>—mastering advanced algebraic identities, recursive probability, and synthetic geometry for Tier-1 university distinction.
+                            </p>
+
+                            <div className="flex items-center gap-2 mb-6">
+                                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-1 rounded-md">18 Weeks</span>
                             </div>
 
-                            <div className="mt-6 flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                <div className="flex gap-2 shrink-0">
-                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
-                                        <img src="/images/textbooks/aops-vol1.jpeg" alt="AoPS Volume 1" className="w-full h-full object-cover" />
+                            <div className="bg-indigo-50/50 p-5 rounded-2xl border border-indigo-100 flex-grow mb-6">
+                                <h4 className="font-bold text-indigo-900 mb-2">Target Goal:</h4>
+                                <p className="text-slate-700 leading-relaxed font-medium">
+                                    AIME Qualification
+                                </p>
+                            </div>
+
+                            <div className="mt-auto pt-4 border-t border-slate-100 space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-16 h-20 shrink-0 bg-gray-200 rounded-md shadow-inner overflow-hidden relative">
+                                        <img src="/images/textbooks/CoverFinal_MasteringAmc1012.avif" alt="Mastering AMC 10/12" className="w-full h-full object-cover" />
                                     </div>
-                                    <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
-                                        <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Volume 2" className="w-full h-full object-cover" />
+                                    <div>
+                                        <h4 className="text-xs font-bold text-indigo-500 uppercase tracking-wider mb-1">Primary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">Mastering AMC 10/12 (OmegaLearn)</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Primary Resource</h4>
-                                    <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Volume 1: The Basics and Volume 2: and Beyond</p>
+                                <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                    <div className="flex gap-2 shrink-0">
+                                        <div className="w-10 h-14 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/aops-vol1.jpeg" alt="AoPS Volume 1" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="w-10 h-14 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Volume 2" className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Secondary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">The Art of Problem Solving (AoPS) Vol. 1 & 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* COMP-AIME */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
+                        >
+                            <div className="mb-4">
+                                <span className="inline-block text-xs font-mono font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded mb-2">COMP-AIME</span>
+                                <h3 className="text-2xl font-bold text-primary">The Invitational Lab</h3>
+                            </div>
+                            <div className="w-12 h-1 bg-accent rounded-full mb-4"></div>
+
+                            <p className="text-slate-600 mb-6 font-medium leading-relaxed">
+                                The pinnacle of our logic sequence. This intellectual proving ground shifts focus to <strong className="text-accent">Extreme Heuristics</strong>—inventing new pathways for problems with no standard solutions, elevating AIME qualifiers to USAMO contenders.
+                            </p>
+
+                            <div className="flex items-center gap-2 mb-6">
+                                <span className="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-100 px-2 py-1 rounded-md">12-18 Weeks</span>
+                            </div>
+
+                            <div className="bg-orange-50/50 p-5 rounded-2xl border border-orange-100 flex-grow mb-6">
+                                <h4 className="font-bold text-orange-900 mb-2">Target Goal:</h4>
+                                <p className="text-slate-700 leading-relaxed font-medium">
+                                    AIME Mastery / USAMO Path
+                                </p>
+                            </div>
+
+                            <div className="mt-auto pt-4 border-t border-slate-100 space-y-4">
+                                <div className="flex items-center gap-4">
+                                    <div className="flex gap-2 shrink-0">
+                                        <div className="w-12 h-16 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/aops-vol2.jpg" alt="AoPS Volume 2" className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs font-bold text-accent uppercase tracking-wider mb-1">Primary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">AoPS Vol 2 / AIME Past Papers</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
+                                    <div className="flex gap-2 shrink-0">
+                                        <div className="w-10 h-14 bg-gray-200 rounded shadow-inner overflow-hidden relative">
+                                            <img src="/images/textbooks/CoverFinal_MasteringAmc1012.avif" alt="Mastering AMC 10/12" className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Secondary Resource</h4>
+                                        <p className="text-sm text-slate-700 font-medium leading-snug">Mastering AMC 10/12 (OmegaLearn) For Formula Verification.</p>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
