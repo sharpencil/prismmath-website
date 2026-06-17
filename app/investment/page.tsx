@@ -1,7 +1,7 @@
 import { metadata } from '../layout';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { MoveRight, ShieldCheck, Check, Info } from 'lucide-react';
+import { MoveRight, ShieldCheck, Check, Info, Users } from 'lucide-react';
 import Link from 'next/link';
 
 export default function InvestmentPage() {
@@ -104,27 +104,32 @@ export default function InvestmentPage() {
                         </p>
                     </div>
 
-                    <div className="max-w-lg mx-auto">
-                        {/* Consolidated Pricing (Standard) */}
+                    <div className="grid md:grid-cols-2 gap-8 items-stretch justify-center max-w-4xl mx-auto">
+                        
+                        {/* Standard Mastery Series */}
                         <div className="bg-white p-8 md:p-10 rounded-3xl border-2 border-accent shadow-2xl flex flex-col justify-between relative z-10">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-primary font-bold px-6 py-2 rounded-full text-sm shadow-md whitespace-nowrap inline-flex items-center gap-2">
                                 <ShieldCheck className="w-4 h-4" />
-                                Cohort Admissions Open
+                                Recommended Cohort
                             </div>
 
                             <div>
-                                <h3 className="text-2xl font-bold text-primary mb-2 text-center">Standard Academic Tuition</h3>
-                                <p className="text-slate-600 text-sm font-medium mb-6 pb-6 border-b border-slate-100 text-center">
-                                    Transparent, flat-rate enrollment per academic track.
+                                <h3 className="text-2xl font-bold text-primary mb-2">Standard Mastery Series</h3>
+                                <p className="text-blue-600 text-sm font-medium mb-6 pb-6 border-b border-slate-100">
+                                    Collaborative logic-building in small cohorts.
                                 </p>
 
-                                <div className="mb-8 text-center">
-                                    <div className="flex items-center justify-center gap-2 mb-4">
+                                <div className="mb-8">
+                                    <div className="flex items-end gap-2 mb-3">
                                         <span className="text-5xl font-bold text-primary">$200</span>
-                                        <span className="text-slate-500 font-medium">/ Month per track</span>
+                                        <span className="text-slate-500 font-medium mb-1.5">/ Month per track</span>
                                     </div>
-                                    <p className="text-xs text-slate-500 leading-relaxed italic max-w-sm mx-auto">
-                                        Enroll in any track and secure PhD-led direct instruction. Tuition is billed monthly and includes all materials.
+                                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-800 bg-blue-50 px-3 py-1.5 rounded-md mb-2">
+                                        <Users className="w-4 h-4 shrink-0" />
+                                        <span>Group of 3–6 students</span>
+                                    </div>
+                                    <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        Collaborate with motivated peers while receiving individual performance reviews. Billed monthly, all materials included.
                                     </p>
                                 </div>
 
@@ -143,7 +148,7 @@ export default function InvestmentPage() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                        <span className="text-slate-700 font-medium text-sm">Small group environment (max 6-8 students)</span>
+                                        <span className="text-slate-700 font-medium text-sm">Rigorous homework review & grading</span>
                                     </li>
                                 </ul>
                             </div>
@@ -154,12 +159,68 @@ export default function InvestmentPage() {
                                     <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                                            <strong>Unmatched Value:</strong> At the $200 rate, you receive 6 total hours of specialized instruction per month. This equates to effectively <strong>$33/hr</strong> for PhD-led education—significantly higher value and time-on-task than local generic tutoring chains.
+                                            <strong>Effective Rate: ~$33/hr</strong>. You receive 6 total hours of specialized instruction per month, representing outstanding value for PhD-led education.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Private Research Track */}
+                        <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between relative z-0">
+                            <div>
+                                <h3 className="text-2xl font-bold text-primary mb-2">Private Research Track</h3>
+                                <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                                    Highly customized individual mentorship.
+                                </p>
+
+                                <div className="mb-8">
+                                    <div className="flex items-end gap-2 mb-3">
+                                        <span className="text-5xl font-bold text-primary">$400</span>
+                                        <span className="text-slate-500 font-medium mb-1.5">/ Month per track</span>
+                                    </div>
+                                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-md mb-2">
+                                        <ShieldCheck className="w-4 h-4 shrink-0" />
+                                        <span>One-on-one (1:1 Instruction)</span>
+                                    </div>
+                                    <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        Fully tailored curriculum built for your student's unique academic goals. Deep mathematical derivation and high-performance prep.
+                                    </p>
+                                </div>
+
+                                <ul className="space-y-4 mb-8">
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                        <span className="text-slate-700 font-medium text-sm">1.5-hour weekly sessions (6 hrs/mo)</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                        <span className="text-slate-700 font-medium text-sm">100% personalized Dr. Ryu mentorship</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                        <span className="text-slate-700 font-medium text-sm">Custom research project & syllabus</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                        <span className="text-slate-700 font-medium text-sm">Flexible pacing & advanced 경시 (AMC/AIME) prep</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Value Comparison Callout */}
+                            <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                                <div className="flex items-start gap-3">
+                                    <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                                    <div>
+                                        <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                                            <strong>Effective Rate: ~$66/hr</strong>. Elite 1-on-1 PhD instruction at a highly competitive rate, maximizing focused learning time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Multi-Track Advantage */}

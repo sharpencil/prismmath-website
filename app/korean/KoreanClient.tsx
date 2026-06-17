@@ -136,7 +136,7 @@ export default function KoreanClient() {
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">5. 독보적 가치와 합리적 투자</h3>
                                 <ul className="list-disc pl-5 space-y-2">
-                                    <li><strong>합리적 비용:</strong> 월 $200 수준(Investment 메뉴 참조)의 비용은 일반 프랜차이즈 학원과 비슷하거나 오히려 더 저렴하지만, 전직 대학교수가 직접 강의하는 교육의 질은 비교할 수 없습니다.</li>
+                                    <li><strong>합리적 비용:</strong> 그룹 수업 월 $200, 1:1 개인 수업 월 $400 수준(Investment 메뉴 참조)으로 전직 대학교수가 직접 강의하는 압도적인 교육의 질을 경험하실 수 있습니다.</li>
                                     <li><strong>미래를 위한 최적화된 선택:</strong> 중고교 시절의 시행착오를 줄여 수학을 조기에 마스터하고 경시 성과까지 거두는 것이 가장 경제적이고 확실한 입시 전략입니다.</li>
                                 </ul>
                             </div>
