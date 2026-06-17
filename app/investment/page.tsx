@@ -14,7 +14,7 @@ export default function InvestmentPage() {
                 <div className="container mx-auto max-w-5xl text-center">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-blue-900 font-medium text-sm mb-8">
                         <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                        Founding Cohort Open
+                        Cohort Admissions Open
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary mb-6 tracking-tight leading-tight">
@@ -104,60 +104,27 @@ export default function InvestmentPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 items-stretch justify-center max-w-4xl mx-auto">
-
-                        {/* Anchor Pricing (Standard) */}
-                        <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between relative mt-8 opacity-80 scale-95 md:transform md:translate-x-4 z-0">
-                            <div>
-                                <h3 className="text-xl font-bold text-slate-800 mb-2">Standard Academic Rate</h3>
-                                <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">Future official tuition rate</p>
-
-                                <div className="mb-8">
-                                    <span className="text-4xl font-bold text-primary">$200</span>
-                                    <span className="text-slate-500 font-medium"> / Month per track</span>
-                                </div>
-
-                                <ul className="space-y-4 mb-8">
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
-                                        <span className="text-slate-600 text-sm">1.5-hour weekly sessions</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
-                                        <span className="text-slate-600 text-sm">University-standard curriculum</span>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <Check className="w-5 h-5 text-slate-300 shrink-0 mt-0.5" />
-                                        <span className="text-slate-600 text-sm">Small group environment</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Featured Pricing (Founding Offer) */}
+                    <div className="max-w-lg mx-auto">
+                        {/* Consolidated Pricing (Standard) */}
                         <div className="bg-white p-8 md:p-10 rounded-3xl border-2 border-accent shadow-2xl flex flex-col justify-between relative z-10">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-primary font-bold px-6 py-2 rounded-full text-sm shadow-md whitespace-nowrap inline-flex items-center gap-2">
                                 <ShieldCheck className="w-4 h-4" />
-                                Special Founding Offer
+                                Cohort Admissions Open
                             </div>
 
                             <div>
-                                <h3 className="text-2xl font-bold text-primary mb-2">Founding Member Cohort</h3>
-                                <p className="text-blue-600 text-sm font-medium mb-6 pb-6 border-b border-slate-100">
-                                    Available for the next 3 students to join our launch cohort.
+                                <h3 className="text-2xl font-bold text-primary mb-2 text-center">Standard Academic Tuition</h3>
+                                <p className="text-slate-600 text-sm font-medium mb-6 pb-6 border-b border-slate-100 text-center">
+                                    Transparent, flat-rate enrollment per academic track.
                                 </p>
 
-                                <div className="mb-8">
-                                    <div className="flex items-end gap-2 mb-3">
-                                        <span className="text-5xl font-bold text-primary">$150</span>
-                                        <span className="text-slate-500 font-medium mb-1.5"> / Month per track</span>
+                                <div className="mb-8 text-center">
+                                    <div className="flex items-center justify-center gap-2 mb-4">
+                                        <span className="text-5xl font-bold text-primary">$200</span>
+                                        <span className="text-slate-500 font-medium">/ Month per track</span>
                                     </div>
-                                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-2 rounded-md mb-2 w-full">
-                                        <ShieldCheck className="w-4 h-4 shrink-0" />
-                                        <span>Lifetime rate lock for founding families.</span>
-                                    </div>
-                                    <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
-                                        Enroll in any track now at the founding rate and maintain this pricing for the duration of your student's journey at PrismMath.
+                                    <p className="text-xs text-slate-500 leading-relaxed italic max-w-sm mx-auto">
+                                        Enroll in any track and secure PhD-led direct instruction. Tuition is billed monthly and includes all materials.
                                     </p>
                                 </div>
 
@@ -168,11 +135,15 @@ export default function InvestmentPage() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                        <span className="text-slate-700 font-medium text-sm">PhD-Led direct instruction</span>
+                                        <span className="text-slate-700 font-medium text-sm">PhD-Led direct instruction (Dr. Young Ryu)</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                                         <span className="text-slate-700 font-medium text-sm">University-grade logical derivation</span>
+                                    </li>
+                                    <li className="flex items-start gap-3">
+                                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                        <span className="text-slate-700 font-medium text-sm">Small group environment (max 6-8 students)</span>
                                     </li>
                                 </ul>
                             </div>
@@ -183,7 +154,7 @@ export default function InvestmentPage() {
                                     <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                                            <strong>Unmatched Value:</strong> At the $150 rate, you receive 6 total hours of specialized instruction per month. This equates to effectively <strong>$25/hr</strong> for PhD-led education—significantly higher value and time-on-task than local generic tutoring chains.
+                                            <strong>Unmatched Value:</strong> At the $200 rate, you receive 6 total hours of specialized instruction per month. This equates to effectively <strong>$33/hr</strong> for PhD-led education—significantly higher value and time-on-task than local generic tutoring chains.
                                         </p>
                                     </div>
                                 </div>
@@ -206,13 +177,13 @@ export default function InvestmentPage() {
                 <div className="container mx-auto max-w-4xl text-center relative z-10">
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Secure Your Academic Advantage</h2>
                     <p className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto">
-                        Join our founding cohort to lock in premium academic instruction at our introductory rate. Spaces are strictly limited to ensure uncompromising educational quality.
+                        Join our upcoming cohort to secure premium academic instruction. Spaces are strictly limited to ensure uncompromising educational quality.
                     </p>
                     <Link
                         href="/contact"
                         className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-primary font-bold rounded-full text-lg shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:shadow-[0_0_50px_rgba(0,229,255,0.5)] hover:scale-105 transition-all duration-300 group"
                     >
-                        Request Consultation to Secure Founding Pricing
+                        Request Consultation to Secure Enrollment
                         <MoveRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
