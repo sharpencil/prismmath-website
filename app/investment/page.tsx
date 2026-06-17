@@ -203,7 +203,7 @@ export default function InvestmentPage() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                        <span className="text-slate-700 font-medium text-sm">Flexible pacing & advanced 경시 (AMC/AIME) prep</span>
+                                        <span className="text-slate-700 font-medium text-sm">Flexible pacing & advanced competitive math (AMC/AIME) prep</span>
                                     </li>
                                 </ul>
                             </div>
