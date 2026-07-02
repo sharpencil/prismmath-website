@@ -51,14 +51,14 @@ export default function KoreanClient() {
                         >
                             <div className="absolute inset-0 z-0 bg-primary">
                                 <Image
-                                    src="/founder1.png"
+                                    src="/founder2.jpeg"
                                     alt="Dr. Young Ryu"
                                     fill
-                                    className="object-cover object-center scale-[0.8] origin-center"
+                                    className="object-cover object-center"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-                                {/* Face concealment overlay - significant dark opacity from Top Left */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900/95 via-35% to-transparent/5"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/20 to-transparent"></div>
+                                {/* Face concealment overlay - significant dark opacity from Bottom Right to Top Left */}
+                                <div className="absolute inset-0 bg-gradient-to-tl from-gray-950/50 via-gray-900/45 via-35% to-transparent/2"></div>
                             </div>
                             <div className="absolute inset-0 z-10 p-6">
                                 <div className="absolute bottom-6 left-6 text-left w-full pr-6">
@@ -157,7 +157,7 @@ export default function KoreanClient() {
                                     <p className="text-slate-500">Founder & Head Instructor</p>
                                 </div>
                                 <div className="w-16 h-16 relative rounded-full overflow-hidden border-2 border-slate-200">
-                                    <Image src="/founder.png" alt="Dr. Ryu" fill className="object-cover" />
+                                    <Image src="/founder2.jpeg" alt="Dr. Ryu" fill className="object-cover" />
                                 </div>
                             </div>
                         </div>

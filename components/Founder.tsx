@@ -20,14 +20,14 @@ export default function Founder() {
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                             <Image
-                                src="/founder.png"
+                                src="/founder2.jpeg"
                                 alt="Dr. Young Ryu"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
-                            {/* Face concealment overlay - significant dark opacity from Top Left */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900/95 via-35% to-transparent/5"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+                            {/* Face concealment overlay - significant dark opacity from Bottom Right to Top Left */}
+                            <div className="absolute inset-0 bg-gradient-to-tl from-gray-950/50 via-gray-900/45 via-35% to-transparent/2"></div>
                             <div className="absolute bottom-4 left-4">
                                 <p className="font-bold text-lg">Dr. Young Ryu</p>
                                 <p className="text-accent text-sm">Founder & Head Instructor</p>
