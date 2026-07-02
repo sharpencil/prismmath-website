@@ -16,7 +16,7 @@ export default function Founder() {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="w-full md:w-1/3 flex justify-center md:justify-end"
+                        className="w-full md:w-1/3 flex flex-col items-center md:items-end justify-center gap-4"
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group">
                             <Image
@@ -33,6 +33,9 @@ export default function Founder() {
                                 <p className="text-accent text-sm">Founder & Head Instructor</p>
                             </div>
                         </div>
+                        <p className="text-xs text-gray-400 italic max-w-xs text-center md:text-right leading-relaxed">
+                            Practicing what we preach: A proud Gold Medal moment with my son at the 2026 Central Texas Math Competition.
+                        </p>
                     </motion.div>
 
                     {/* Bio Text */}
