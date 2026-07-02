@@ -29,6 +29,7 @@ interface CourseTrackLayoutProps {
     color: string;
     prevSeries?: { name: string; href: string };
     nextSeries?: { name: string; href: string };
+    underTableContent?: ReactNode;
 }
 
 export default function CourseTrackLayout({
@@ -40,7 +41,8 @@ export default function CourseTrackLayout({
     resourceBlurb,
     color,
     prevSeries,
-    nextSeries
+    nextSeries,
+    underTableContent
 }: CourseTrackLayoutProps) {
     return (
         <main className="min-h-screen bg-white">
@@ -104,6 +106,11 @@ export default function CourseTrackLayout({
                             </table>
                         </div>
                     </motion.div>
+                    {underTableContent && (
+                        <div className="mt-8">
+                            {underTableContent}
+                        </div>
+                    )}
                 </div>
             </section>
 
