@@ -261,7 +261,7 @@ export default function KoreanClient() {
                             </h2>
                             <p className="text-slate-300 text-lg leading-relaxed">
                                 시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 실제 대학과 명문 고등학교에서 채택하는
-                                Larson Algebra, Stewart Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
+                                Jacobs, Foerster, Stewart Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
@@ -279,8 +279,8 @@ export default function KoreanClient() {
                             <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
                                 {[
                                     { title: "Dimensions Math 6A/6B", image: "/images/textbooks/dimensions-math-6a-6b.jpg" },
-                                    { title: "Elementary Algebra", image: "/images/textbooks/larson-elementary-algebra.jpg" },
-                                    { title: "Intermediate Algebra", image: "/images/textbooks/larson-intermediate-algebra.jpg" },
+                                    { title: "Elementary Algebra", image: "/images/textbooks/jacobs_algebra.jpg" },
+                                    { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerester_algebra2.jpg" },
                                     { title: "Geometry", image: "/images/textbooks/jacobs-geometry.jpg" },
                                     { title: "Precalculus with Limits", image: "/images/textbooks/larson-precalculus.jpg" },
                                     { title: "Calculus", image: "/images/textbooks/stewart-calculus.jpg" },

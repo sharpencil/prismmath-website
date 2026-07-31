@@ -10,10 +10,10 @@ const courses = [
 
 const resources = [
     {
-        title: "Intermediate Algebra",
-        author: "Ron Larson",
-        description: "Focus on complex algebraic structures and functions.",
-        image: "/images/textbooks/larson-intermediate-algebra.jpg"
+        title: "Algebra and Trigonometry: Functions and Applications",
+        author: "Paul A. Foerster",
+        description: "A highly rigorous text legendary for its conceptual depth and focus on mathematical modeling of real-world phenomena.",
+        image: "/images/textbooks/foerester_algebra2.jpg"
     },
     {
         title: "Precalculus with Limits",

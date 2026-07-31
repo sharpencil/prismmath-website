@@ -10,9 +10,9 @@ const courses = [
 const resources = [
     {
         title: "Elementary Algebra",
-        author: "Ron Larson",
-        description: "A university-standard text known for its clarity and rigor. we use the same text used by college freshman.",
-        image: "/images/textbooks/larson-elementary-algebra.jpg"
+        author: "Harold R. Jacobs",
+        description: "A legendary text known for its clear, conversational style and focus on logical exploration, widely praised as the best introduction to algebra.",
+        image: "/images/textbooks/jacobs_algebra.jpg"
     },
     {
         title: "Geometry: Seeing, Doing, Understanding",
@@ -27,10 +27,10 @@ export default function Structural() {
         <CourseTrackLayout
             seriesTitle="Structural Series"
             targetProfile="Grades 7-9 | University-Track Core"
-            description="The core of the university track. These courses utilize the Larson Collegiate Series (Algebra) and Jacobs Series (Geometry). These are chosen for their visual clarity and focus on mathematical modeling and deductive proof."
+            description="The core of the university track. These courses utilize the Jacobs Series for both Algebra and Geometry. These are chosen for their visual clarity, pedagogical depth, and focus on mathematical modeling and deductive proof."
             courses={courses}
             resources={resources}
-            resourceBlurb="We reject 'high school' textbooks that water down content. We use the same texts (Larson, Jacobs) found in elite universities to ensure the 'University Operating System' is installed early."
+            resourceBlurb="We reject 'high school' textbooks that water down content. We use the same texts (Jacobs) found in elite schools and universities to ensure the 'University Operating System' is installed early."
             color="from-green-400 to-green-600"
             prevSeries={{ name: "The Bridge Series", href: "/programs/bridge" }}
             nextSeries={{ name: "Advanced Analysis", href: "/programs/advanced-analysis" }}
