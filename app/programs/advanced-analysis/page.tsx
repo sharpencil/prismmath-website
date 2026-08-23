@@ -13,13 +13,13 @@ const resources = [
         title: "Algebra and Trigonometry: Functions and Applications",
         author: "Paul A. Foerster",
         description: "A highly rigorous text legendary for its conceptual depth and focus on mathematical modeling of real-world phenomena.",
-        image: "/images/textbooks/foerester_algebra2.jpg"
+        image: "/images/textbooks/foerster_algebra2.jpg"
     },
     {
-        title: "Precalculus with Limits",
-        author: "Ron Larson",
-        description: "Comprehensive preparation for Calculus with a focus on analytic geometry.",
-        image: "/images/textbooks/larson-precalculus.jpg"
+        title: "Precalculus: Mathematics for Calculus",
+        author: "James Stewart",
+        description: "The classic text that provides a clear and focused preparation for calculus, emphasizing conceptual understanding and mathematical modeling.",
+        image: "/images/textbooks/stewart_precalculus.jpeg"
     },
     {
         title: "Calculus: Early Transcendentals",

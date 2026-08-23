@@ -7,7 +7,7 @@ import { Plus, Minus } from 'lucide-react';
 const faqs = [
     {
         question: "Do you follow Common Core standards?",
-        answer: "We utilize the world-renowned Singapore Math method for our Foundations track and university-grade textbooks (Cengage/Larson/Stewart) for our secondary courses. This ensures your child is not only 100% aligned with Texas Essential Knowledge and Skills (TEKS) but is also working with the exact materials used by elite university engineering programs. We don't just help students survive school math; we help them master the University Operating System."
+        answer: "We utilize the world-renowned Singapore Math method for our Foundations track and university-grade textbooks (Foerster/Stewart) for our secondary courses. This ensures your child is not only 100% aligned with Texas Essential Knowledge and Skills (TEKS) but is also working with the exact materials used by elite university engineering programs. We don't just help students survive school math; we help them master the University Operating System."
     },
     {
         question: "How are student levels determined?",

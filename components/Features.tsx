@@ -12,7 +12,7 @@ const features = [
     },
     {
         title: "University-Grade Curriculum",
-        description: "Standard tutors use public school workbooks. We use the elite texts used by top-tier universities and engineering programs (Larson, Stewart, AoPS).",
+        description: "Standard tutors use public school workbooks. We use the elite texts used by top-tier universities and engineering programs (Foerster, Stewart, AoPS).",
         icon: BookOpen,
         color: "bg-purple-100 text-purple-600"
     },

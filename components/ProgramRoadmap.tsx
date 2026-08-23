@@ -38,7 +38,7 @@ const series = [
         grades: "Grades 9-12",
         icon: Rocket,
         color: "from-blue-400 to-blue-600",
-        description: "Algebra II, Pre-Calculus, and AP Calculus AB/BC using Stewart's Calculus, the gold standard for engineering majors.",
+        description: "Algebra II, Pre-Calculus, and AP Calculus AB/BC using Foerster's and Stewart's textbooks, the gold standard for engineering majors.",
         href: "/programs/advanced-analysis"
     },
     {

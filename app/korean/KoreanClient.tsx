@@ -116,7 +116,7 @@ export default function KoreanClient() {
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대 진학을 위한 &apos;University Operating System&apos;</h3>
                                 <p>
-                                    저희는 Larson과 Stewart 등 실제 미국 명문 공대에서 사용하는 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 이는 학교 교육의 한계를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 산업공학 박사로서 AP Statistics와 Pre-Calculus/Calculus의 핵심인 확률 모델링 및 함수 분석을 대학 전공 수준의 깊이로 지도하여 입시의 차별화된 변별력을 만들어냅니다.
+                                    저희는 Foerster와 Stewart 등 실제 미국 명문 공대에서 사용하는 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 이는 학교 교육의 한계를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 산업공학 박사로서 AP Statistics와 Pre-Calculus/Calculus의 핵심인 확률 모델링 및 함수 분석을 대학 전공 수준의 깊이로 지도하여 입시의 차별화된 변별력을 만들어냅니다.
                                 </p>
                             </div>
 
@@ -280,9 +280,9 @@ export default function KoreanClient() {
                                 {[
                                     { title: "Dimensions Math 6A/6B", image: "/images/textbooks/dimensions-math-6a-6b.jpg" },
                                     { title: "Elementary Algebra", image: "/images/textbooks/jacobs_algebra.jpg" },
-                                    { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerester_algebra2.jpg" },
+                                    { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerster_algebra2.jpg" },
                                     { title: "Geometry", image: "/images/textbooks/jacobs-geometry.jpg" },
-                                    { title: "Precalculus with Limits", image: "/images/textbooks/larson-precalculus.jpg" },
+                                    { title: "Precalculus: Mathematics for Calculus", image: "/images/textbooks/stewart_precalculus.jpeg" },
                                     { title: "Calculus", image: "/images/textbooks/stewart-calculus.jpg" },
                                     { title: "The Practice of Statistics", image: "/images/textbooks/practice-of-statistics.jpg" },
                                     { title: "AoPS Vol 2", image: "/images/textbooks/aops-vol2.jpg" },

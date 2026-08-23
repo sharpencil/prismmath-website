@@ -78,7 +78,7 @@ export default function InvestmentPage() {
                             </div>
                             <h3 className="text-xl font-bold text-primary mb-3">University Textbooks</h3>
                             <p className="text-slate-600 leading-relaxed text-sm">
-                                No generic worksheets. We utilize Jacobs, Foerster, Larson, Stewart, and Singapore Math Dimensions for rigorous foundational building.
+                                No generic worksheets. We utilize Jacobs, Foerster, Stewart, and Singapore Math Dimensions for rigorous foundational building.
                             </p>
                         </div>
                     </div>
