@@ -3,10 +3,10 @@
 import CourseTrackLayout from "@/components/CourseTrackLayout";
 
 const courses = [
-    { code: "F-100A/B", level: "Foundations 1", grade: "2nd Grade", principles: "Mental Math, Bar Modeling, Place Value." },
-    { code: "F-200A/B", level: "Foundations 2", grade: "3rd Grade", principles: "Multi-digit Mult/Div, Fractions, Logic." },
-    { code: "A-300A/B", level: "Analytical 1", grade: "4th Grade", principles: "Decimals, Data Analysis, Area/Perimeter logic." },
-    { code: "A-400A/B", level: "Analytical 2", grade: "5th Grade", principles: "Ratios, Percentages, 3D Geometry Foundations." },
+    { code: "JML-2A/B", level: "Foundations 1", grade: "2nd Grade", principles: "Mental Math, Bar Modeling, Place Value." },
+    { code: "JML-3A/B", level: "Foundations 2", grade: "3rd Grade", principles: "Multi-digit Mult/Div, Fractions, Logic." },
+    { code: "JML-4A/B", level: "Analytical 1", grade: "4th Grade", principles: "Decimals, Data Analysis, Area/Perimeter logic." },
+    { code: "JML-5A/B", level: "Analytical 2", grade: "5th Grade", principles: "Ratios, Percentages, 3D Geometry Foundations." },
 ];
 
 const resources = [
@@ -27,7 +27,7 @@ const resources = [
 export default function JuniorLab() {
     return (
         <CourseTrackLayout
-            seriesTitle="Junior Lab Series"
+            seriesTitle="Junior Math Lab Series"
             targetProfile="Grades 2-5 | Gifted & Talented"
             description="A laboratory for logical discovery. Powered by Dimensions Math (Singapore Math). These courses transition students from standard arithmetic to structural problem-solving. This series builds the visual 'model-drawing' muscle required for the Engineering Track."
             courses={courses}

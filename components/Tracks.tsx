@@ -6,7 +6,7 @@ import { Ruler, BookOpen, BarChart3, Target } from 'lucide-react';
 const tracks = [
     {
         grade: "Grades 2-5",
-        title: "Junior Lab",
+        title: "Junior Math Lab",
         description: "Building visual logic and model-drawing using the renowned Singapore Math method.",
         icon: Ruler,
         color: "from-blue-500 to-cyan-400",

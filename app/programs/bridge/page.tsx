@@ -34,7 +34,7 @@ export default function Bridge() {
             resources={resources}
             resourceBlurb="Most students struggle in Algebra because they never truly mastered the behavior of numbers. The Bridge Series treats arithmetic as an architectural discipline."
             color="from-orange-400 to-orange-600"
-            prevSeries={{ name: "Junior Lab Series", href: "/programs/junior-lab" }}
+            prevSeries={{ name: "Junior Math Lab Series", href: "/programs/junior-lab" }}
             nextSeries={{ name: "Structural Series", href: "/programs/structural" }}
             underTableContent={
                 <div className="w-full p-6 md:p-8 rounded-3xl bg-slate-50 border border-slate-100 shadow-sm text-slate-600 text-left leading-relaxed">

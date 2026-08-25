@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const series = [
     {
-        title: "Junior Lab Series",
+        title: "Junior Math Lab Series",
         subtitle: "Elementary Logic",
         grades: "Grades 2-5",
         icon: Sparkles,

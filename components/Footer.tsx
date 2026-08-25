@@ -61,7 +61,7 @@ export default function Footer() {
                         <h4 className="font-bold text-white mb-6 uppercase text-xs tracking-widest">The Tracks</h4>
                         <ul className="space-y-3 text-sm">
                             <li>
-                                <Link href="/programs/junior-lab" className="text-slate-400 hover:text-accent transition-colors">Junior Lab Series (2-5)</Link>
+                                <Link href="/programs/junior-lab" className="text-slate-400 hover:text-accent transition-colors">Junior Math Lab Series (2-5)</Link>
                             </li>
                             <li>
                                 <Link href="/programs/bridge" className="text-slate-400 hover:text-accent transition-colors">Bridge Series (Grade 6)</Link>

@@ -99,7 +99,7 @@ export default function Hero() {
                             </div>
                         </motion.div>
 
-                        {/* Card 2: Bottom Left - Junior Lab */}
+                        {/* Card 2: Bottom Left - Junior Math Lab */}
                         <motion.div
                             animate={{ y: [0, 15, 0], x: [0, -5, 0] }}
                             transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 1.5 }}
@@ -110,7 +110,7 @@ export default function Hero() {
                                     ∑
                                 </div>
                                 <div>
-                                    <div className="text-[10px] text-gray-500 font-bold uppercase tracking-wider leading-tight">JUNIOR LAB</div>
+                                    <div className="text-[10px] text-gray-500 font-bold uppercase tracking-wider leading-tight">JUNIOR MATH LAB</div>
                                     <div className="font-bold text-primary text-sm">Logic & Proofs</div>
                                 </div>
                             </div>
