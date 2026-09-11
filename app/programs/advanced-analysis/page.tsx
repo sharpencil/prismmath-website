@@ -5,7 +5,8 @@ import CourseTrackLayout from "@/components/CourseTrackLayout";
 const courses = [
     { code: "ALG-401A/B", level: "Algebra 2 / Trig", grade: "9th-10th Grade", principles: "Complex Systems, Series, Optimization." },
     { code: "PRC-501A/B", level: "Pre-Calculus", grade: "10th-11th Grade", principles: "Vector Analysis, Trig Identities." },
-    { code: "CAL-601A/B", level: "Calculus (AP BC+)", grade: "11th-12th Grade", principles: "Differential & Integral Calculus (Univ. Std)." },
+    { code: "CAL-601A/B", level: "Calculus (AP AB)", grade: "11th-12th Grade", principles: "Differential & Integral Calculus (Univ. Std)." },
+    { code: "CAL-602A/B", level: "Calculus (AP BC+)", grade: "11th-12th Grade", principles: "Advanced Integration, Infinite Series, & Vector Functions." },
 ];
 
 const resources = [
@@ -20,6 +21,18 @@ const resources = [
         author: "James Stewart",
         description: "The classic text that provides a clear and focused preparation for calculus, emphasizing conceptual understanding and mathematical modeling.",
         image: "/images/textbooks/stewart_precalculus.jpeg"
+    },
+    {
+        title: "Precalculus with Trigonometry: Concepts and Applications",
+        author: "Paul A. Foerster",
+        description: "Renowned for its analytical rigor and engineering applications, seamlessly connecting advanced functions and trigonometry to calculus.",
+        image: "/images/textbooks/precalculus_foerster.jpg"
+    },
+    {
+        title: "Calculus: Graphical, Numerical, Algebraic",
+        author: "Finney, Demana, Waits, Kennedy",
+        description: "The premier AP Calculus benchmark text, emphasizing balanced multi-representational problem solving for AP exam mastery.",
+        image: "/images/textbooks/calculusab_finney.jpg"
     },
     {
         title: "Calculus: Early Transcendentals",

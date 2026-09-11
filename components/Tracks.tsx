@@ -23,7 +23,7 @@ const tracks = [
     {
         grade: "Grades 10-12",
         title: "Advanced Analysis",
-        description: "Elite preparation for Pre-Calculus, AP Calculus BC+, and AP Statistics.",
+        description: "Elite preparation for Pre-Calculus, AP Calculus (AB / BC+), and AP Statistics.",
         icon: BarChart3,
         color: "from-emerald-500 to-teal-400",
         delay: 0.2
