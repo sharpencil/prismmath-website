@@ -11,16 +11,16 @@ const courses = [
 
 const resources = [
     {
-        title: "Algebra and Trigonometry: Functions and Applications",
-        author: "Paul A. Foerster",
-        description: "A highly rigorous text legendary for its conceptual depth and focus on mathematical modeling of real-world phenomena.",
-        image: "/images/textbooks/foerster_algebra2.jpg"
+        title: "Glencoe Algebra 2",
+        author: "McGraw Hill / Glencoe (Primary Textbook)",
+        description: "The core Algebra 2 curriculum framework used by local high schools, providing comprehensive coverage of polynomial, rational, logarithmic, and trigonometric functions.",
+        image: "/images/textbooks/glencoealgebra2.jpg"
     },
     {
-        title: "Precalculus: Mathematics for Calculus",
-        author: "James Stewart",
-        description: "The classic text that provides a clear and focused preparation for calculus, emphasizing conceptual understanding and mathematical modeling.",
-        image: "/images/textbooks/stewart_precalculus.jpeg"
+        title: "Algebra and Trigonometry: Functions and Applications",
+        author: "Paul A. Foerster (Supplementary)",
+        description: "Used as an advanced supplementary text by local Honors programs—legendary for its conceptual depth and mathematical modeling of real-world phenomena.",
+        image: "/images/textbooks/foerster_algebra2.jpg"
     },
     {
         title: "Precalculus with Trigonometry: Concepts and Applications",
@@ -33,12 +33,6 @@ const resources = [
         author: "Finney, Demana, Waits, Kennedy",
         description: "The premier AP Calculus benchmark text, emphasizing balanced multi-representational problem solving for AP exam mastery.",
         image: "/images/textbooks/calculusab_finney.jpg"
-    },
-    {
-        title: "Calculus: Early Transcendentals",
-        author: "James Stewart",
-        description: "The global standard for engineering calculus. Virtually every top university engineering program uses this text.",
-        image: "/images/textbooks/stewart-calculus.jpg"
     }
 ];
 
@@ -50,7 +44,7 @@ export default function AdvancedAnalysis() {
             description="Targeting High-Honors GPA and University readiness. These courses use university-standard textbooks to prepare students for top-tier Engineering, Physics, and Data Science programs."
             courses={courses}
             resources={resources}
-            resourceBlurb="At this level, we stop pretending. We use James Stewart's Calculus—the exact same book used at UT Austin, Texas A&M, and Stanford. Your child will walk into college calculus and feel effectively bored."
+            resourceBlurb="At this level, we align directly with the rigorous standards of top local high schools while elevating conceptual depth. By pairing Glencoe's Algebra 2 framework with Foerster's analytical modeling and Finney's AP Calculus, we ensure complete classroom dominance and university engineering readiness."
             color="from-blue-400 to-blue-600"
             prevSeries={{ name: "Structural Series", href: "/programs/structural" }}
             nextSeries={{ name: "Professional Elite", href: "/programs/professional-elite" }}

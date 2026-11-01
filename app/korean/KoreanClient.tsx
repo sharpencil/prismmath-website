@@ -116,7 +116,7 @@ export default function KoreanClient() {
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대 진학을 위한 &apos;University Operating System&apos;</h3>
                                 <p>
-                                    저희는 Foerster와 Stewart 등 실제 미국 명문 공대에서 사용하는 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 이는 학교 교육의 한계를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 산업공학 박사로서 AP Statistics와 Pre-Calculus/Calculus의 핵심인 확률 모델링 및 함수 분석을 대학 전공 수준의 깊이로 지도하여 입시의 차별화된 변별력을 만들어냅니다.
+                                    저희는 Glencoe, Foerster, Finney 등 오스틴 명문 학군 고교 및 대학 과정에서 검증된 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 이는 학교 내신 완벽 대비를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 산업공학 박사로서 AP Statistics와 Pre-Calculus/Calculus의 핵심인 확률 모델링 및 함수 분석을 대학 전공 수준의 깊이로 지도하여 입시의 차별화된 변별력을 만들어냅니다.
                                 </p>
                             </div>
 
@@ -141,7 +141,8 @@ export default function KoreanClient() {
                             <div>
                                 <h3 className="text-xl font-bold text-primary mb-2">5. 독보적 가치와 합리적 투자</h3>
                                 <ul className="list-disc pl-5 space-y-2">
-                                    <li><strong>합리적 비용:</strong> 그룹 수업 월 $200, 1:1 개인 수업 월 $400 수준(Investment 메뉴 참조)으로 전직 대학교수가 직접 강의하는 압도적인 교육의 질을 경험하실 수 있습니다.</li>
+                                    <li><strong>체계적인 수업 시간 및 합리적 비용:</strong> 초·중등 및 AMC 8 과정은 집중도를 극대화하고 수업 후반부 피로도를 없애는 <strong>고밀도 75분 포맷(월 $240)</strong>으로, 고등 및 AMC 10/12·AIME 과정은 심층 증명을 위한 <strong>90분 포맷(월 $280)</strong>으로 운영됩니다. 1:1 개인 연구 과정은 <strong>월 $500(75분) / 월 $600(90분)</strong>(Investment 메뉴 참조)으로 전직 대학교수가 직접 강의하는 압도적인 교육의 질을 경험하실 수 있습니다.</li>
+                                    <li><strong>소수 정예 코호트(3–6명) &amp; 1:1 맞춤 멘토링:</strong> 동료 학생들과의 협동 문제 풀이 및 실전 모의 경시 시너지를 위한 3–6명 정원 코호트 수업과, 학생 개인의 진도·목표에 완벽히 맞춘 1:1 프라이빗 연구 수업을 함께 운영합니다.</li>
                                     <li><strong>미래를 위한 최적화된 선택:</strong> 중고교 시절의 시행착오를 줄여 수학을 조기에 마스터하고 경시 성과까지 거두는 것이 가장 경제적이고 확실한 입시 전략입니다.</li>
                                 </ul>
                             </div>
@@ -238,11 +239,11 @@ export default function KoreanClient() {
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                    <span className="text-slate-600">오스틴 북서부(Northwest Austin)에 위치한 학습 환경</span>
+                                    <span className="text-slate-600">정원 3–6명의 집중 코호트 운영으로 협동 문제 풀이 및 실전 모의 경시 시너지 극대화</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                                    <span className="text-slate-600">학생 맞춤형 피드백을 위해 대규모 강의 지양, 소수 정예(Small Cohort) 운영 원칙</span>
+                                    <span className="text-slate-600">학년별 최적화된 고밀도 수업 (초·중등 75분 / 고등·AMC 10+ 90분) 및 1:1 맞춤 피드백</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -260,8 +261,8 @@ export default function KoreanClient() {
                                 <span className="text-accent">최상위 커리큘럼</span>
                             </h2>
                             <p className="text-slate-300 text-lg leading-relaxed">
-                                시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 실제 대학과 명문 고등학교에서 채택하는
-                                Jacobs, Foerster, Stewart Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
+                                시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 명문 학군 고등학교와 대학 과정에서 채택하는
+                                Jacobs, Glencoe, Foerster, Finney Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
@@ -276,18 +277,20 @@ export default function KoreanClient() {
                         </div>
 
                         <div className="relative mt-8 md:mt-0">
-                            <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
+                            <div className="grid grid-cols-4 sm:grid-cols-4 gap-3">
                                 {[
                                     { title: "Dimensions Math 6A/6B", image: "/images/textbooks/dimensions-math-6a-6b.jpg" },
                                     { title: "Elementary Algebra", image: "/images/textbooks/jacobs_algebra.jpg" },
-                                    { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerster_algebra2.jpg" },
                                     { title: "Geometry", image: "/images/textbooks/jacobs-geometry.jpg" },
-                                    { title: "Precalculus: Mathematics for Calculus", image: "/images/textbooks/stewart_precalculus.jpeg" },
-                                    { title: "Calculus", image: "/images/textbooks/stewart-calculus.jpg" },
+                                    { title: "Glencoe Algebra 2", image: "/images/textbooks/glencoealgebra2.jpg" },
+                                    { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerster_algebra2.jpg" },
+                                    { title: "Precalculus with Trigonometry: Concepts and Applications", image: "/images/textbooks/precalculus_foerster.jpg" },
+                                    { title: "Calculus: Graphical, Numerical, Algebraic", image: "/images/textbooks/calculusab_finney.jpg" },
                                     { title: "The Practice of Statistics", image: "/images/textbooks/practice-of-statistics.jpg" },
+                                    { title: "Mastering AMC 10/12", image: "/images/textbooks/CoverFinal_MasteringAmc1012.avif" },
                                     { title: "AoPS Vol 2", image: "/images/textbooks/aops-vol2.jpg" },
-                                    { title: "1600.io SAT Math", image: "/images/textbooks/1600io-sat-math.jpg" },
-                                    { title: "PWN the SAT", image: "/images/textbooks/pwn-sat.jpg" },
+                                    { title: "PrepPros: The Complete Guide To Digital SAT Math: The Best SAT Math Book For Students Seeking A Perfect Score", image: "/images/textbooks/prepprossat.jpg" },
+                                    { title: "Dr. John Chung's SAT Math Fifth Edition: 63 Perfect Tips and 16 Complete Tests", image: "/images/textbooks/drjohnchungsat.jpg" },
                                 ].map((book, idx) => (
                                     <motion.div
                                         key={idx}

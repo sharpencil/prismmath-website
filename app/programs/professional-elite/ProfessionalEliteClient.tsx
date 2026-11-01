@@ -22,16 +22,16 @@ const resources = [
         image: "/images/textbooks/aops-vol2.jpg"
     },
     {
-        title: "1600.io SAT Math Orange Book",
-        author: "George Rimakis & J. Sestak",
-        description: "The definitive guide to the Digital SAT math section, known for its exhaustive explanations.",
-        image: "/images/textbooks/1600io-sat-math.jpg"
+        title: "PrepPros: The Complete Guide To Digital SAT Math",
+        author: "PrepPros (Primary Textbook)",
+        description: "The best SAT Math book for students seeking a perfect score—covering every Digital SAT domain, Desmos optimization, and level-4 hard problem sets.",
+        image: "/images/textbooks/prepprossat.jpg"
     },
     {
-        title: "PWN the SAT: Math Guide",
-        author: "Mike McClenathan",
-        description: "Data-driven strategies for the Digital SAT interface and path optimization.",
-        image: "/images/textbooks/pwn-sat.jpg"
+        title: "Dr. John Chung's SAT Math Fifth Edition",
+        author: "Dr. John Chung (Supplementary)",
+        description: "63 Perfect Tips and 16 Complete Tests designed to build computational speed and conquer the hardest Module 2 questions.",
+        image: "/images/textbooks/drjohnchungsat.jpg"
     }
 ];
 
@@ -50,7 +50,7 @@ export default function ProfessionalElite() {
                         </div>
                         <p className="text-sm font-semibold text-purple-600 mb-2 uppercase tracking-wider">Path Optimization & Digital SAT</p>
                         <p className="text-gray-600 leading-relaxed text-sm">
-                            Treat the Digital SAT as a system to be decoded. Leveraging Dr. Ryu’s expertise in Human Factors Engineering, we focus on error reduction and path optimization. By mastering the 1600.io and PWN SAT frameworks, students turn high-stakes testing into a repeatable, scientific process.
+                            Treat the Digital SAT as a system to be decoded. Leveraging Dr. Ryu’s expertise in Human Factors Engineering, we focus on error reduction and path optimization. Using <strong>PrepPros: The Complete Guide To Digital SAT Math</strong> as our primary textbook and <strong>Dr. John Chung&apos;s SAT Math Fifth Edition (63 Perfect Tips &amp; 16 Complete Tests)</strong> as our supplementary drill text, students turn high-stakes testing into a repeatable, scientific process.
                         </p>
                     </div>
 
