@@ -206,6 +206,15 @@ const weeklyCalendar = [
         dayFull: "Wednesday",
         sessions: [
             {
+                startHour: 14,
+                startMin: 45,
+                durationMin: 60,
+                time: "2:45 – 3:45 PM",
+                title: "Math Olympiad Club",
+                type: "school" as const,
+                meta: "Spicewood Elementary",
+            },
+            {
                 startHour: 16,
                 startMin: 10,
                 durationMin: 75,
@@ -332,6 +341,10 @@ export default function CurrentClassesPage() {
                                 <span className="w-2 h-2 rounded-full bg-purple-600"></span>
                                 1:1 Private Mentorship
                             </span>
+                            <span className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1.5 rounded-lg shadow-2xs">
+                                <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                School Math Olympiad Club
+                            </span>
                             <span className="inline-flex items-center gap-2 bg-white text-slate-600 border border-dashed border-slate-300 px-3 py-1.5 rounded-lg shadow-2xs">
                                 <span className="w-2.5 h-2.5 rounded-xs border border-dashed border-slate-400 bg-slate-50"></span>
                                 Empty Slots: Open for New Group or 1:1
@@ -417,6 +430,29 @@ export default function CurrentClassesPage() {
                                                                 </span>
                                                             </div>
                                                             <div className="font-bold text-xs md:text-sm leading-tight text-primary mt-1">
+                                                                {session.title}
+                                                            </div>
+                                                        </div>
+                                                        <div className="text-[10px] text-gray-600 font-medium truncate">
+                                                            {session.meta}
+                                                        </div>
+                                                    </div>
+                                                ) : session.type === "school" ? (
+                                                    <div
+                                                        key={sIdx}
+                                                        style={{ top: `${topPx + 1}px`, height: `${heightPx - 2}px` }}
+                                                        className="absolute inset-x-1.5 rounded-xl bg-emerald-50 text-primary px-2.5 py-1.5 shadow-2xs border border-emerald-100 border-l-4 border-l-emerald-600 flex flex-col justify-between overflow-hidden hover:z-20 hover:shadow-md transition-shadow"
+                                                    >
+                                                        <div>
+                                                            <div className="flex items-center justify-between gap-1">
+                                                                <span className="text-[10px] font-bold text-emerald-700 leading-none">
+                                                                    {session.time}
+                                                                </span>
+                                                                <span className="text-[9px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded leading-none shrink-0">
+                                                                    School
+                                                                </span>
+                                                            </div>
+                                                            <div className="font-bold text-xs leading-tight text-primary mt-0.5">
                                                                 {session.title}
                                                             </div>
                                                         </div>

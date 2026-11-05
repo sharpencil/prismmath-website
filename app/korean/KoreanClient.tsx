@@ -193,6 +193,15 @@ const koreanWeeklyCalendar = [
         dayKor: "수요일",
         sessions: [
             {
+                startHour: 14,
+                startMin: 45,
+                durationMin: 60,
+                time: "2:45 – 3:45 PM",
+                title: "Math Olympiad Club",
+                type: "school" as const,
+                meta: "Spicewood Elementary",
+            },
+            {
                 startHour: 16,
                 startMin: 10,
                 durationMin: 75,
@@ -331,12 +340,13 @@ export default function KoreanClient() {
                                             <p><strong className="text-white">카이스트</strong> 학사/석사 <span className="text-slate-400 block sm:inline sm:ml-1">(B.S./M.S., KAIST)</span></p>
                                             <p><strong className="text-white">버지니아 공대</strong> 박사 <span className="text-slate-400 block sm:inline sm:ml-1">(Ph.D., Virginia Tech)</span></p>
                                             <p>전 <strong className="text-white">텍사스 주립대</strong> 교수 <span className="text-slate-400 block sm:inline sm:ml-1">(Texas State)</span></p>
+                                            <p>현 <strong className="text-white">스파이스우드 초등</strong> 수학경시 클럽 코치</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <p className="text-xs text-gray-400 italic text-center md:text-right leading-relaxed">
-                                내 아이를 가르치는 마음과 검증된 방법으로: 2026 센트럴 텍사스 수학 경시대회에서 금메달(스파이스우드 초등팀)을 목에 건 첫째와 함께.
+                                내 아이를 가르치는 마음과 검증된 방법으로: 직접 지도하는 스파이스우드 초등 수학경시 클럽(Math Olympiad Club) 팀을 이끌고 2026 센트럴 텍사스 수학 경시대회 금메달을 목에 건 첫째와 함께.
                             </p>
                         </motion.div>
                     </div>
@@ -400,6 +410,11 @@ export default function KoreanClient() {
                                     <li><strong>Computational Dominance:</strong> 경시 수학의 4대 핵심 분야(Advanced Algebra, Number Theory, Geometry, Combinatorics)를 심도 있게 다룹니다.</li>
                                     <li><strong>전략적 승리의 경험:</strong> 경시 수학은 단순 암기로 해결할 수 없는 &apos;추론의 영역&apos;입니다. 고난도 문제의 핵심을 꿰뚫는 &apos;Satori(깨달음)&apos;를 경험한 아이들은 대학 입시 포트폴리오에서 압도적인 경쟁력(Portfolio Closer)을 갖게 됩니다. 제가 이과 수학 전 과정을 조기 마스터하며 얻었던 &apos;전략적 우위&apos;의 경험을 우리 아이들에게 물려주고 싶습니다.</li>
                                 </ul>
+                                <div className="mt-4 bg-emerald-50/70 border border-emerald-100 border-l-4 border-l-emerald-600 rounded-xl p-4 text-sm text-slate-700">
+                                    <p className="leading-relaxed">
+                                        <strong className="text-emerald-800">지역 명문초 수학경시 클럽 직접 지도 (Community Leadership):</strong> 류영 원장은 매주 수요일 방과 후(2:45–3:45 PM) <strong>스파이스우드 초등학교(Spicewood Elementary) Math Olympiad Club</strong>을 직접 지도하며, 지역 내 수학 영재들의 경시대회 입상과 수리 논리력 향상을 이끌고 있습니다.
+                                    </p>
+                                </div>
                             </div>
 
                             <div>
@@ -623,6 +638,10 @@ export default function KoreanClient() {
                                     <span className="w-2 h-2 rounded-full bg-purple-600"></span>
                                     1:1 프라이빗 멘토링
                                 </span>
+                                <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1.5 rounded-lg shadow-2xs">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                    학교 경시 클럽 지도
+                                </span>
                                 <span className="inline-flex items-center gap-1.5 bg-white text-slate-600 border border-dashed border-slate-300 px-3 py-1.5 rounded-lg shadow-2xs">
                                     <span className="w-2.5 h-2.5 rounded-xs border border-dashed border-slate-400 bg-slate-50"></span>
                                     빈 시간대: 신규 그룹·1:1 개설 가능
@@ -707,6 +726,29 @@ export default function KoreanClient() {
                                                                     </span>
                                                                 </div>
                                                                 <div className="font-bold text-xs md:text-sm leading-tight text-primary mt-1">
+                                                                    {session.title}
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-[10px] text-gray-600 font-medium truncate">
+                                                                {session.meta}
+                                                            </div>
+                                                        </div>
+                                                    ) : session.type === "school" ? (
+                                                        <div
+                                                            key={sIdx}
+                                                            style={{ top: `${topPx + 1}px`, height: `${heightPx - 2}px` }}
+                                                            className="absolute inset-x-1.5 rounded-xl bg-emerald-50 text-primary px-2.5 py-1.5 shadow-2xs border border-emerald-100 border-l-4 border-l-emerald-600 flex flex-col justify-between overflow-hidden hover:z-20 hover:shadow-md transition-shadow"
+                                                        >
+                                                            <div>
+                                                                <div className="flex items-center justify-between gap-1">
+                                                                    <span className="text-[10px] font-bold text-emerald-700 leading-none">
+                                                                        {session.time}
+                                                                    </span>
+                                                                    <span className="text-[9px] font-bold bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded leading-none shrink-0">
+                                                                        학교 클럽
+                                                                    </span>
+                                                                </div>
+                                                                <div className="font-bold text-xs leading-tight text-primary mt-0.5">
                                                                     {session.title}
                                                                 </div>
                                                             </div>
