@@ -42,6 +42,9 @@ export default function Footer() {
                                 <Link href="/programs" className="text-slate-400 hover:text-accent transition-colors">Programs</Link>
                             </li>
                             <li>
+                                <Link href="/current-classes" className="text-slate-400 hover:text-accent transition-colors">Current Classes</Link>
+                            </li>
+                            <li>
                                 <Link href="/about" className="text-slate-400 hover:text-accent transition-colors">About Us</Link>
                             </li>
                             <li>

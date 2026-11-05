@@ -107,7 +107,7 @@ export default function InvestmentPage() {
                     <div className="max-w-5xl mx-auto mb-16">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200">
                             <div>
-                                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1 rounded-full mb-3">
+                                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-3">
                                     <Users className="w-3.5 h-3.5" />
                                     Small-Group Cohorts (3–6 Students)
                                 </div>
@@ -120,61 +120,61 @@ export default function InvestmentPage() {
 
                         <div className="grid md:grid-cols-2 gap-8 items-stretch">
                             {/* Card 1: Elementary & Middle Cohort ($240) */}
-                            <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
+                            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-3 py-1 rounded-md">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100 px-3 py-1 rounded-md">
                                             Grades 2–8 &amp; AMC 8
                                         </span>
-                                        <span className="text-xs font-semibold text-slate-500">
+                                        <span className="text-xs font-semibold text-gray-600">
                                             75 Min / Week
                                         </span>
                                     </div>
 
                                     <h4 className="text-2xl font-bold text-primary mb-2">Elementary &amp; Middle Cohort</h4>
-                                    <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                                    <p className="text-gray-600 text-sm mb-6 pb-6 border-b border-blue-100">
                                         Junior Math Lab, Bridge Series, Structural Algebra &amp; AMC 8 Foundations.
                                     </p>
 
                                     <div className="mb-6">
                                         <div className="flex items-baseline gap-2 mb-2">
                                             <span className="text-5xl font-bold text-primary">$240</span>
-                                            <span className="text-slate-500 font-medium">/ month per track</span>
+                                            <span className="text-gray-600 font-medium">/ month per track</span>
                                         </div>
-                                        <p className="text-xs text-blue-700 font-semibold mb-3">
+                                        <p className="text-xs text-blue-600 font-semibold mb-3">
                                             75-minute weekly session · 4 sessions/mo (5 hrs/mo)
                                         </p>
-                                        <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        <p className="text-xs text-gray-600 leading-relaxed italic border-l-2 border-blue-200 pl-3">
                                             Engineered for cognitive retention in intensive mathematics—eliminating end-of-class fatigue while building deep conceptual foundations.
                                         </p>
                                     </div>
 
                                     <ul className="space-y-3.5 mb-8">
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">
                                                 <strong>High-Impact 75-Min Format:</strong> 10m warm-up &amp; review, 35m new theorem/proof, 25m whiteboard competition drill, 5m recap
                                             </span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Focused cohort of 3–6 peers for collaborative problem-solving</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">PhD-led direct instruction by Dr. Young Ryu</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Rigorous homework review, grading &amp; all curriculum materials</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                                <div className="mt-4 bg-white rounded-xl p-4 border border-blue-100">
                                     <div className="flex items-start gap-3">
-                                        <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                                        <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                                        <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                                        <p className="text-xs text-gray-600 font-medium leading-relaxed">
                                             <strong>Effective Rate: ~$48/hr</strong>. Includes 5 hours of specialized PhD-led cohort instruction per month.
                                         </p>
                                     </div>
@@ -182,61 +182,61 @@ export default function InvestmentPage() {
                             </div>
 
                             {/* Card 2: High School & AMC 10+ Cohort ($280) */}
-                            <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
+                            <div className="bg-blue-50 p-8 md:p-10 rounded-3xl border border-blue-100 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-3 py-1 rounded-md">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-100 px-3 py-1 rounded-md">
                                             Grades 9–12 &amp; AMC 10/12+
                                         </span>
-                                        <span className="text-xs font-semibold text-slate-500">
+                                        <span className="text-xs font-semibold text-gray-600">
                                             90 Min / Week
                                         </span>
                                     </div>
 
                                     <h4 className="text-2xl font-bold text-primary mb-2">High School &amp; Olympiad Cohort</h4>
-                                    <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                                    <p className="text-gray-600 text-sm mb-6 pb-6 border-b border-blue-100">
                                         Precalculus, Calculus, AP Statistics, Digital SAT, AMC 10/12 &amp; AIME.
                                     </p>
 
                                     <div className="mb-6">
                                         <div className="flex items-baseline gap-2 mb-2">
                                             <span className="text-5xl font-bold text-primary">$280</span>
-                                            <span className="text-slate-500 font-medium">/ month per track</span>
+                                            <span className="text-gray-600 font-medium">/ month per track</span>
                                         </div>
-                                        <p className="text-xs text-blue-700 font-semibold mb-3">
+                                        <p className="text-xs text-blue-600 font-semibold mb-3">
                                             90-minute weekly session · 4 sessions/mo (6 hrs/mo)
                                         </p>
-                                        <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        <p className="text-xs text-gray-600 leading-relaxed italic border-l-2 border-blue-200 pl-3">
                                             Extended 90-minute sessions engineered for multi-step analytical derivations, university-level proofs, and olympiad problem sets.
                                         </p>
                                     </div>
 
                                     <ul className="space-y-3.5 mb-8">
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">
                                                 <strong>Deep-Dive 90-Min Format:</strong> Comprehensive theorem derivation, Foerster/Finney analysis &amp; AMC 10/12/AIME proofs
                                             </span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Focused cohort of 3–6 ambitious peers for high-level discourse</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">PhD-led direct instruction by Dr. Young Ryu</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">University-standard grading, exam strategy &amp; all materials</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                                <div className="mt-4 bg-white rounded-xl p-4 border border-blue-100">
                                     <div className="flex items-start gap-3">
-                                        <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                                        <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                                        <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                                        <p className="text-xs text-gray-600 font-medium leading-relaxed">
                                             <strong>Effective Rate: ~$47/hr</strong>. Includes 6 hours of advanced PhD-led cohort instruction per month.
                                         </p>
                                     </div>
@@ -249,7 +249,7 @@ export default function InvestmentPage() {
                     <div className="max-w-5xl mx-auto">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-slate-200">
                             <div>
-                                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full mb-3">
+                                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 border border-purple-100 px-3 py-1 rounded-full mb-3">
                                     <UserCheck className="w-3.5 h-3.5" />
                                     One-on-One (1:1 Instruction)
                                 </div>
@@ -262,59 +262,59 @@ export default function InvestmentPage() {
 
                         <div className="grid md:grid-cols-2 gap-8 items-stretch">
                             {/* Card 3: 1-on-1 Focused Mentorship - 75 Min ($500) */}
-                            <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
+                            <div className="bg-purple-50 p-8 md:p-10 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-md">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-100 px-3 py-1 rounded-md">
                                             1:1 Custom Pacing
                                         </span>
-                                        <span className="text-xs font-semibold text-slate-500">
+                                        <span className="text-xs font-semibold text-gray-600">
                                             75 Min / Week
                                         </span>
                                     </div>
 
                                     <h4 className="text-2xl font-bold text-primary mb-2">1-on-1 Private Mentorship (75-Min)</h4>
-                                    <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                                    <p className="text-gray-600 text-sm mb-6 pb-6 border-b border-purple-100">
                                         Ideal for accelerated grade-skipping, targeted course mastery, or individualized AMC 8/10 prep.
                                     </p>
 
                                     <div className="mb-6">
                                         <div className="flex items-baseline gap-2 mb-2">
                                             <span className="text-5xl font-bold text-primary">$500</span>
-                                            <span className="text-slate-500 font-medium">/ month per track</span>
+                                            <span className="text-gray-600 font-medium">/ month per track</span>
                                         </div>
-                                        <p className="text-xs text-emerald-700 font-semibold mb-3">
+                                        <p className="text-xs text-purple-600 font-semibold mb-3">
                                             75-minute weekly 1:1 session · 4 sessions/mo (5 hrs/mo)
                                         </p>
-                                        <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        <p className="text-xs text-gray-600 leading-relaxed italic border-l-2 border-purple-200 pl-3">
                                             Dedicated one-on-one instruction tailored to your student&apos;s exact learning velocity, diagnostic gaps, and competition goals.
                                         </p>
                                     </div>
 
                                     <ul className="space-y-3.5 mb-8">
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Four 75-minute private 1-on-1 sessions per month (5 hrs/mo avg.)</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">100% personalized Dr. Ryu mentorship &amp; diagnostic roadmap</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Custom pace for Credit-by-Exam (CBE), honors acceleration, or contest math</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Direct communication with parents on progress &amp; milestones</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                                <div className="mt-4 bg-white rounded-xl p-4 border border-purple-100">
                                     <div className="flex items-start gap-3">
-                                        <Info className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                        <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                                        <Info className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                                        <p className="text-xs text-gray-600 font-medium leading-relaxed">
                                             <strong>Effective Rate: $100/hr</strong>. Focused 75-minute 1-on-1 sessions maximizing retention and individual breakthrough.
                                         </p>
                                     </div>
@@ -322,63 +322,81 @@ export default function InvestmentPage() {
                             </div>
 
                             {/* Card 4: 1-on-1 Intensive Research - 90 Min ($600) */}
-                            <div className="bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
+                            <div className="bg-purple-50 p-8 md:p-10 rounded-3xl border border-purple-100 shadow-md hover:shadow-xl transition-shadow flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between gap-2 mb-3">
-                                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3 py-1 rounded-md">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-100 px-3 py-1 rounded-md">
                                             1:1 Deep Derivation
                                         </span>
-                                        <span className="text-xs font-semibold text-slate-500">
+                                        <span className="text-xs font-semibold text-gray-600">
                                             90 Min / Week
                                         </span>
                                     </div>
 
                                     <h4 className="text-2xl font-bold text-primary mb-2">1-on-1 Private Research (90-Min)</h4>
-                                    <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                                    <p className="text-gray-600 text-sm mb-6 pb-6 border-b border-purple-100">
                                         Ideal for AP Calculus/Statistics, AMC 10/12 &amp; AIME mastery, Digital SAT 800 prep, or STEM research.
                                     </p>
 
                                     <div className="mb-6">
                                         <div className="flex items-baseline gap-2 mb-2">
                                             <span className="text-5xl font-bold text-primary">$600</span>
-                                            <span className="text-slate-500 font-medium">/ month per track</span>
+                                            <span className="text-gray-600 font-medium">/ month per track</span>
                                         </div>
-                                        <p className="text-xs text-emerald-700 font-semibold mb-3">
+                                        <p className="text-xs text-purple-600 font-semibold mb-3">
                                             90-minute weekly 1:1 session · 4 sessions/mo (6 hrs/mo)
                                         </p>
-                                        <p className="text-xs text-slate-500 leading-relaxed italic border-l-2 border-slate-200 pl-3">
+                                        <p className="text-xs text-gray-600 leading-relaxed italic border-l-2 border-purple-200 pl-3">
                                             Extended one-on-one mentorship for high-schoolers and olympiad contenders tackling complex proofs, university-level calculus, or custom research.
                                         </p>
                                     </div>
 
                                     <ul className="space-y-3.5 mb-8">
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Four 90-minute private 1-on-1 sessions per month (6 hrs/mo avg.)</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Bespoke syllabus for advanced Olympiad proofs (AMC 10/12 &amp; AIME)</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">University-level Calculus, Linear Algebra, or Probability/Statistics modeling</span>
                                         </li>
                                         <li className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                                            <Check className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
                                             <span className="text-slate-700 text-sm">Comprehensive exam strategy &amp; individualized problem-set curation</span>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div className="mt-4 bg-slate-50 rounded-xl p-4 border border-slate-200">
+                                <div className="mt-4 bg-white rounded-xl p-4 border border-purple-100">
                                     <div className="flex items-start gap-3">
-                                        <Info className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                                        <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                                        <Info className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                                        <p className="text-xs text-gray-600 font-medium leading-relaxed">
                                             <strong>Effective Rate: $100/hr</strong>. Six full hours per month of intensive 1-on-1 PhD mentorship and research guidance.
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* 1:1 Parent Feedback Quote Card */}
+                        <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 border border-purple-100 border-l-4 border-l-purple-600 shadow-sm">
+                            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 border border-purple-100 px-3 py-1 rounded-full">
+                                    First-Lesson Parent Feedback
+                                </span>
+                                <span className="text-xs font-semibold text-slate-400">
+                                    1-on-1 AP Calculus Mentorship · Westwood High
+                                </span>
+                            </div>
+                            <blockquote className="text-slate-700 text-sm md:text-base leading-relaxed italic mb-4">
+                                &ldquo;My student loved the very first Calculus lesson today—I have never seen them talk this excitedly after a math class. They told me they had no idea how important foundational concepts were until today. <strong className="text-primary not-italic font-semibold">The moment they heard Dr. Ryu&apos;s explanation, everything clicked in their head, and they finally understood why the problems they couldn&apos;t solve before hadn&apos;t been working.</strong> They said they finally found the mentor they truly needed.&rdquo;
+                            </blockquote>
+                            <div className="text-xs font-bold text-primary">
+                                — Parent of a Westwood High AP Calculus 1:1 Student <span className="font-normal text-slate-500">(Translated from Korean)</span>
                             </div>
                         </div>
                     </div>

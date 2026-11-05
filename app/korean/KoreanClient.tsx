@@ -3,7 +3,270 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, GraduationCap, MapPin, Users, BookOpen } from 'lucide-react';
+import { ArrowRight, CheckCircle2, GraduationCap, MapPin, Users, BookOpen, UserCheck, Calendar, Clock, AlertCircle } from 'lucide-react';
+
+// 요일/시간 수정용 배열
+const koreanGroupLabs = [
+    {
+        name: "AMC 10",
+        subtitle: "고등 경시 & AIME 진출 대비반",
+        grades: "8–10학년",
+        duration: "주 1회 90분",
+        schedule: "토요일 오후 3:00 (Sat 3:00 PM)",
+        status: "모집 중",
+        description: "AIME 합격을 목표로 대수·정수론·기하·조합론의 고난도 추론과 계산 지배력(Computational Dominance)을 훈련합니다.",
+    },
+    {
+        name: "AMC 8",
+        subtitle: "중등 경시 & Mathcounts 핵심반",
+        grades: "5–8학년",
+        duration: "주 1회 75분",
+        schedule: "금요일 오후 7:00 (Fri 7:00 PM)",
+        status: "모집 중",
+        description: "고밀도 75분 수업 포맷으로 AMC 8 고득점 및 상위권 경시 수학의 핵심 문제해결 직관을 완성합니다.",
+    },
+    {
+        name: "Algebra 1",
+        subtitle: "Structural Series · 대수 1 심화",
+        grades: "6–8학년",
+        duration: "주 1회 75분",
+        schedule: "화요일 오후 4:10 (Tue 4:10 PM)",
+        status: "모집 중",
+        description: "Jacobs 교재를 기반으로 단순 문제풀이가 아닌 대학 수준의 대수적 원리 도출과 증명 사고력을 구축합니다.",
+    },
+    {
+        name: "Algebra 1 CBE Prep",
+        subtitle: "Credit-by-Exam 월반 시험 완벽 대비",
+        grades: "6–8학년",
+        duration: "주 1회 75분",
+        schedule: "수요일 오후 4:10 (Wed 4:10 PM)",
+        status: "모집 중",
+        description: "교육청 Credit-by-Exam(CBE) 90점 이상 통과 및 성공적인 수학 월반을 위한 핵심 개념·실전 문제풀이 집중 과정입니다.",
+    },
+    {
+        name: "Prealgebra",
+        subtitle: "The Bridge Series · 중등 대수 코어",
+        grades: "5–7학년",
+        duration: "주 1회 75분",
+        schedule: "목요일 오후 4:10 (Thu 4:10 PM)",
+        status: "모집 중",
+        description: "초등 연산에서 추상적인 중등 대수(Algebra)로 넘어가는 가장 중요한 시기에 빈틈없는 개념 체계를 완성합니다.",
+    },
+    {
+        name: "Junior Lab 4",
+        subtitle: "Junior Math Lab · 초등 심화 4",
+        grades: "4학년",
+        duration: "주 1회 75분",
+        schedule: "수요일 오후 5:45 (Wed 5:45 PM)",
+        status: "모집 중",
+        description: "싱가포르 수학(Dimensions Math)의 시각적 모델링과 다단계 논리 추론을 통해 탄탄한 수리 사고력을 기릅니다.",
+    },
+];
+
+const koreanPrivateRoster = [
+    {
+        course: "AP Calculus AB",
+        grades: "11학년",
+        school: "Westwood High",
+        subtitle: "1:1 고교 내신(GPA) & AP 집중 과정",
+        duration: "주 1회 90분",
+        schedule: "토요일 오후 7:30 (Sat 7:30 PM)",
+        focus: "Westwood 고교 내신 수학 및 AP Calculus 만점(5점) 완벽 대비 · Finney 교재 기반 심화 증명",
+    },
+    {
+        course: "AP Calculus AB",
+        grades: "12학년",
+        school: "Westwood High",
+        subtitle: "1:1 고교 내신(GPA) & AP 집중 과정",
+        duration: "주 1회 90분",
+        schedule: "일요일 오후 7:30 (Sun 7:30 PM)",
+        focus: "Westwood 고교 내신 수학 및 AP Calculus 만점(5점) 완벽 대비 · Finney 교재 기반 심화 증명",
+    },
+    {
+        course: "Precalculus",
+        grades: "10학년",
+        school: "Westwood High",
+        subtitle: "1:1 고교 내신(GPA) & 심화 과정",
+        duration: "주 1회 90분",
+        schedule: "일요일 오전 10:00 (Sun 10:00 AM)",
+        focus: "Westwood 고교 Precalculus 내신 완벽 대비 · Foerster 교재 기반 삼각함수·벡터·함수 모델링",
+    },
+    {
+        course: "Precalculus",
+        grades: "10학년",
+        school: "Westwood High",
+        subtitle: "1:1 고교 내신(GPA) & 심화 과정",
+        duration: "주 1회 90분",
+        schedule: "월요일 오후 5:30 (Mon 5:30 PM)",
+        focus: "Westwood 고교 Precalculus 내신 완벽 대비 · Foerster 교재 기반 삼각함수·벡터·함수 모델링",
+    },
+    {
+        course: "Algebra 2",
+        grades: "9학년",
+        school: "Vandegrift High",
+        subtitle: "1:1 고교 내신(GPA) & 심화 과정",
+        duration: "주 1회 90분",
+        schedule: "화요일 오후 8:00 (Tue 8:00 PM)",
+        focus: "Vandegrift 고교 Algebra 2 내신 완벽 대비 · Glencoe & Foerster 교재 기반 심화 응용",
+    },
+];
+
+const CALENDAR_START_HOUR = 10; // 10:00 AM
+const CALENDAR_END_HOUR = 22;   // 10:00 PM (12 hours total)
+const HOUR_HEIGHT = 72;         // 72px per hour (75 min = 90px, 90 min = 108px)
+const calendarHours = Array.from(
+    { length: CALENDAR_END_HOUR - CALENDAR_START_HOUR },
+    (_, i) => CALENDAR_START_HOUR + i
+);
+
+function formatHourLabel(hour24: number) {
+    if (hour24 === 12) return "12 PM";
+    return hour24 > 12 ? `${hour24 - 12} PM` : `${hour24} AM`;
+}
+
+const koreanWeeklyCalendar = [
+    {
+        dayShort: "SUN",
+        dayKor: "일요일",
+        sessions: [
+            {
+                startHour: 10,
+                startMin: 0,
+                durationMin: 90,
+                time: "10:00 – 11:30 AM",
+                title: "Precalculus",
+                type: "private" as const,
+                meta: "1:1 · 10학년 · Westwood HS",
+            },
+            {
+                startHour: 19,
+                startMin: 30,
+                durationMin: 90,
+                time: "7:30 – 9:00 PM",
+                title: "AP Calculus AB",
+                type: "private" as const,
+                meta: "1:1 · 12학년 · Westwood HS",
+            },
+        ],
+    },
+    {
+        dayShort: "MON",
+        dayKor: "월요일",
+        sessions: [
+            {
+                startHour: 17,
+                startMin: 30,
+                durationMin: 90,
+                time: "5:30 – 7:00 PM",
+                title: "Precalculus",
+                type: "private" as const,
+                meta: "1:1 · 10학년 · Westwood HS",
+            },
+        ],
+    },
+    {
+        dayShort: "TUE",
+        dayKor: "화요일",
+        sessions: [
+            {
+                startHour: 16,
+                startMin: 10,
+                durationMin: 75,
+                time: "4:10 – 5:25 PM",
+                title: "Algebra 1",
+                type: "group" as const,
+                meta: "그룹 랩 · 6–8학년",
+            },
+            {
+                startHour: 20,
+                startMin: 0,
+                durationMin: 90,
+                time: "8:00 – 9:30 PM",
+                title: "Algebra 2",
+                type: "private" as const,
+                meta: "1:1 · 9학년 · Vandegrift HS",
+            },
+        ],
+    },
+    {
+        dayShort: "WED",
+        dayKor: "수요일",
+        sessions: [
+            {
+                startHour: 16,
+                startMin: 10,
+                durationMin: 75,
+                time: "4:10 – 5:25 PM",
+                title: "Algebra 1 CBE Prep",
+                type: "group" as const,
+                meta: "그룹 랩 · 6–8학년",
+            },
+            {
+                startHour: 17,
+                startMin: 45,
+                durationMin: 75,
+                time: "5:45 – 7:00 PM",
+                title: "Junior Lab 4",
+                type: "group" as const,
+                meta: "그룹 랩 · 4학년",
+            },
+        ],
+    },
+    {
+        dayShort: "THU",
+        dayKor: "목요일",
+        sessions: [
+            {
+                startHour: 16,
+                startMin: 10,
+                durationMin: 75,
+                time: "4:10 – 5:25 PM",
+                title: "Prealgebra",
+                type: "group" as const,
+                meta: "그룹 랩 · 5–7학년",
+            },
+        ],
+    },
+    {
+        dayShort: "FRI",
+        dayKor: "금요일",
+        sessions: [
+            {
+                startHour: 19,
+                startMin: 0,
+                durationMin: 75,
+                time: "7:00 – 8:15 PM",
+                title: "AMC 8",
+                type: "group" as const,
+                meta: "그룹 랩 · 5–8학년",
+            },
+        ],
+    },
+    {
+        dayShort: "SAT",
+        dayKor: "토요일",
+        sessions: [
+            {
+                startHour: 15,
+                startMin: 0,
+                durationMin: 90,
+                time: "3:00 – 4:30 PM",
+                title: "AMC 10",
+                type: "group" as const,
+                meta: "그룹 랩 · 8–10학년",
+            },
+            {
+                startHour: 19,
+                startMin: 30,
+                durationMin: 90,
+                time: "7:30 – 9:00 PM",
+                title: "AP Calculus AB",
+                type: "private" as const,
+                meta: "1:1 · 11학년 · Westwood HS",
+            },
+        ],
+    },
+];
 
 export default function KoreanClient() {
     return (
@@ -111,12 +374,20 @@ export default function KoreanClient() {
                                     <li><strong>원리를 꿰뚫는 100%의 이해:</strong> 저는 수백 문제를 푸는 것보다, 단 한 문제를 풀더라도 그 밑바닥에 흐르는 수학적 원리를 완벽하게 해부하는 데 중점을 둡니다.</li>
                                     <li><strong>처음 보는 고난도 문제도 해결하는 힘:</strong> 원리를 제대로 관통하면 문제를 많이 풀어보지 않아도 스스로 논리를 세워 해결할 수 있는 &apos;수학적 직관&apos;이 생깁니다. 이것이 제가 추구하는 &apos;진짜 실력&apos;이며, 명문대 입시와 미래 커리어에서 결정적인 변별력을 만드는 힘입니다.</li>
                                 </ul>
+                                <div className="mt-4 bg-purple-50/70 border border-purple-100 border-l-4 border-l-purple-600 rounded-xl p-4 text-sm text-slate-700">
+                                    <p className="italic leading-relaxed">
+                                        &ldquo;아이가 수학 수업 후에 이렇게 흥분해서 말하는 건 처음이네요. <strong>&lsquo;컨셉(원리)이 이렇게 중요한지 몰랐다&rsquo;</strong>고, 선생님 설명을 듣는 순간 머리에서 팡팡 이해되는 느낌을 받았고, <strong>이제껏 안 풀렸던 문제들이 왜 그랬는지 비로소 이해되는 느낌</strong>이었다네요.&rdquo;
+                                    </p>
+                                    <p className="text-xs font-bold text-purple-700 mt-1.5">
+                                        — Westwood High · AP Calculus 1:1 멘토링 첫 수업 후 학부모님 메시지 중
+                                    </p>
+                                </div>
                             </div>
 
                             <div>
-                                <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대 진학을 위한 &apos;University Operating System&apos;</h3>
+                                <h3 className="text-xl font-bold text-primary mb-2">2. 메인 트랙: 미국 명문대 진학을 위한 &apos;University Operating System&apos; &amp; 고교 내신 완벽 대비</h3>
                                 <p>
-                                    저희는 Glencoe, Foerster, Finney 등 오스틴 명문 학군 고교 및 대학 과정에서 검증된 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 이는 학교 내신 완벽 대비를 넘어 STEM 전공에서 독보적인 두각을 나타낼 수 있는 가장 확실한 길입니다. 특히, 산업공학 박사로서 AP Statistics와 Pre-Calculus/Calculus의 핵심인 확률 모델링 및 함수 분석을 대학 전공 수준의 깊이로 지도하여 입시의 차별화된 변별력을 만들어냅니다.
+                                    저희는 Glencoe, Foerster, Finney 등 오스틴 명문 학군 고교 및 대학 과정에서 검증된 교재를 기반으로 중고등 과정의 &apos;대학 수준 사고 체계&apos;를 구축합니다. 특히 <strong>1:1 프라이빗 멘토링 과정</strong>은 <strong>Westwood, McNeil, Vandegrift 고등학교</strong>의 까다로운 내신 수학(Honors Algebra 2, Precalculus, AP Calculus, AP Statistics) 진도와 학교별 시험 출제 경향에 완벽히 맞춘 밀착 관리로 최상위 GPA와 STEM 전공 경쟁력을 동시에 완성합니다.
                                 </p>
                             </div>
 
@@ -142,14 +413,14 @@ export default function KoreanClient() {
                                 <h3 className="text-xl font-bold text-primary mb-2">5. 독보적 가치와 합리적 투자</h3>
                                 <ul className="list-disc pl-5 space-y-2">
                                     <li><strong>체계적인 수업 시간 및 합리적 비용:</strong> 초·중등 및 AMC 8 과정은 집중도를 극대화하고 수업 후반부 피로도를 없애는 <strong>고밀도 75분 포맷(월 $240)</strong>으로, 고등 및 AMC 10/12·AIME 과정은 심층 증명을 위한 <strong>90분 포맷(월 $280)</strong>으로 운영됩니다. 1:1 개인 연구 과정은 <strong>월 $500(75분) / 월 $600(90분)</strong>(Investment 메뉴 참조)으로 전직 대학교수가 직접 강의하는 압도적인 교육의 질을 경험하실 수 있습니다.</li>
-                                    <li><strong>소수 정예 코호트(3–6명) &amp; 1:1 맞춤 멘토링:</strong> 동료 학생들과의 협동 문제 풀이 및 실전 모의 경시 시너지를 위한 3–6명 정원 코호트 수업과, 학생 개인의 진도·목표에 완벽히 맞춘 1:1 프라이빗 연구 수업을 함께 운영합니다.</li>
+                                    <li><strong>소수 정예 코호트(3–6명) &amp; 1:1 고교 내신 맞춤 멘토링:</strong> 동료 학생들과의 협동 문제 풀이 및 실전 모의 경시 시너지를 위한 3–6명 정원 코호트 수업과, <strong>Westwood · McNeil · Vandegrift 고교 내신 수학(GPA) 및 AP 과정</strong>에 100% 맞춘 1:1 프라이빗 수업을 함께 운영합니다.</li>
                                     <li><strong>미래를 위한 최적화된 선택:</strong> 중고교 시절의 시행착오를 줄여 수학을 조기에 마스터하고 경시 성과까지 거두는 것이 가장 경제적이고 확실한 입시 전략입니다.</li>
                                 </ul>
                             </div>
 
                             <div>
                                 <p>
-                                    현재 Spicewood 초등, Canyon Vista 중등, Westwood 고등학생 등 오스틴 북서쪽(NW Austin) 학생들과 소규모 그룹 수업을 진행 중입니다. 제 아이들이 직접 참여하는 수업인 만큼, <strong>&apos;전직 교수의 전문성&apos;</strong>과 <strong>&apos;내 자식을 가르치는 진정성&apos;</strong>을 담아 최고의 선택이 될 것임을 약속드립니다.
+                                    현재 <strong>Spicewood 초등</strong>, <strong>Canyon Vista · Pearson Ranch · Cedar Valley 중등</strong>, <strong>Westwood · McNeil · Vandegrift 고등학생</strong> 등 오스틴 북서쪽(NW Austin) 명문 학군 학생들과 소규모 그룹 및 1:1 수업을 진행 중입니다. 제 아이들이 직접 참여하는 수업인 만큼, <strong>&apos;전직 교수의 전문성&apos;</strong>과 <strong>&apos;내 자식을 가르치는 진정성&apos;</strong>을 담아 최고의 선택이 될 것임을 약속드립니다.
                                 </p>
                             </div>
 
@@ -312,6 +583,337 @@ export default function KoreanClient() {
                                 ))}
                             </div>
                             <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Current Classes Section (현재 진행 중인 클래스) */}
+            <section className="py-24 px-6 bg-white border-t border-slate-100">
+                <div className="container mx-auto max-w-6xl">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 font-bold text-xs uppercase tracking-wider mb-4">
+                            <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                            Current Classes &amp; Availability
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">현재 진행 중인 클래스 &amp; 주간 시간표</h2>
+                        <p className="text-slate-600 max-w-2xl mx-auto">
+                            모든 수업은 오스틴 북서부(NW Austin) 프라이빗 랩에서 류영 원장이 직접 지도합니다. 현재 운영 중인 주간 시간표와 신규 개설 가능 시간대를 한눈에 확인하세요.
+                        </p>
+                    </div>
+
+                    {/* 주간 전체 시간표 (Linear Time-Grid Weekly Schedule) */}
+                    <div className="mb-16">
+                        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
+                            <div>
+                                <h3 className="text-xl md:text-2xl font-bold text-primary flex items-center gap-2">
+                                    <Calendar className="w-5 h-5 text-accent-text" />
+                                    주간 수업 시간표 (Weekly Schedule)
+                                </h3>
+                                <p className="text-sm text-slate-600 mt-1">
+                                    시간표의 빈 시간대는 신규 소규모 그룹 코호트 또는 1:1 맞춤형 수업 개설이 가능한 시간대입니다.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-2.5 text-xs font-semibold">
+                                <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 border border-blue-100 px-3 py-1.5 rounded-lg shadow-2xs">
+                                    <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                                    그룹 랩 (모집 중)
+                                </span>
+                                <span className="inline-flex items-center gap-1.5 bg-purple-50 text-purple-600 border border-purple-100 px-3 py-1.5 rounded-lg shadow-2xs">
+                                    <span className="w-2 h-2 rounded-full bg-purple-600"></span>
+                                    1:1 프라이빗 멘토링
+                                </span>
+                                <span className="inline-flex items-center gap-1.5 bg-white text-slate-600 border border-dashed border-slate-300 px-3 py-1.5 rounded-lg shadow-2xs">
+                                    <span className="w-2.5 h-2.5 rounded-xs border border-dashed border-slate-400 bg-slate-50"></span>
+                                    빈 시간대: 신규 그룹·1:1 개설 가능
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                            <div className="overflow-x-auto">
+                                <div className="min-w-[920px]">
+                                    {/* Top Header Row: Time Gutter + 7 Days */}
+                                    <div className="grid grid-cols-[68px_repeat(7,minmax(0,1fr))] bg-primary text-white border-b border-slate-200">
+                                        <div className="py-3 px-2 text-center text-[11px] font-semibold text-slate-400 border-r border-white/10 flex items-center justify-center">
+                                            CST
+                                        </div>
+                                        {koreanWeeklyCalendar.map((day, idx) => (
+                                            <div
+                                                key={idx}
+                                                className="py-3 px-2 text-center border-r border-white/10 last:border-r-0"
+                                            >
+                                                <div className="text-xs font-bold tracking-widest uppercase text-accent">{day.dayShort}</div>
+                                                <div className="text-xs font-medium text-slate-300">{day.dayKor}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Linear Timeline Body */}
+                                    <div
+                                        className="relative grid grid-cols-[68px_repeat(7,minmax(0,1fr))]"
+                                        style={{ height: `${calendarHours.length * HOUR_HEIGHT}px` }}
+                                    >
+                                        {/* Left Time Labels Column */}
+                                        <div className="relative border-r border-slate-200 bg-slate-50/70 select-none">
+                                            {calendarHours.map((hour) => (
+                                                <div
+                                                    key={hour}
+                                                    className="border-b border-slate-100 pr-2.5 pt-1 text-right text-[11px] font-semibold text-slate-400"
+                                                    style={{ height: `${HOUR_HEIGHT}px` }}
+                                                >
+                                                    {formatHourLabel(hour)}
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* 7 Day Columns with Linear Hour Grid Lines & Positioned Session Blocks */}
+                                        {koreanWeeklyCalendar.map((day, dIdx) => (
+                                            <div
+                                                key={dIdx}
+                                                className="relative border-r border-slate-200/80 last:border-r-0"
+                                            >
+                                                {/* Background Hour & Half-Hour Grid Lines */}
+                                                {calendarHours.map((hour) => (
+                                                    <div
+                                                        key={hour}
+                                                        className="border-b border-slate-200/70 relative"
+                                                        style={{ height: `${HOUR_HEIGHT}px` }}
+                                                    >
+                                                        <div className="absolute inset-x-0 top-1/2 border-b border-dashed border-slate-100 pointer-events-none" />
+                                                    </div>
+                                                ))}
+
+                                                {/* Positioned Session Blocks */}
+                                                {day.sessions.map((session, sIdx) => {
+                                                    const minutesFromStart =
+                                                        (session.startHour - CALENDAR_START_HOUR) * 60 + session.startMin;
+                                                    const topPx = (minutesFromStart / 60) * HOUR_HEIGHT;
+                                                    const heightPx = (session.durationMin / 60) * HOUR_HEIGHT;
+
+                                                    return session.type === "group" ? (
+                                                        <div
+                                                            key={sIdx}
+                                                            style={{ top: `${topPx + 1}px`, height: `${heightPx - 2}px` }}
+                                                            className="absolute inset-x-1.5 rounded-xl bg-blue-50 text-primary px-2.5 py-2 shadow-2xs border border-blue-100 border-l-4 border-l-blue-600 flex flex-col justify-between overflow-hidden hover:z-20 hover:shadow-md transition-shadow"
+                                                        >
+                                                            <div>
+                                                                <div className="flex items-center justify-between gap-1">
+                                                                    <span className="text-[10px] font-bold text-blue-600 leading-none">
+                                                                        {session.time}
+                                                                    </span>
+                                                                    <span className="text-[9px] font-bold bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded leading-none shrink-0">
+                                                                        그룹
+                                                                    </span>
+                                                                </div>
+                                                                <div className="font-bold text-xs md:text-sm leading-tight text-primary mt-1">
+                                                                    {session.title}
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-[10px] text-gray-600 font-medium truncate">
+                                                                {session.meta}
+                                                            </div>
+                                                        </div>
+                                                    ) : (
+                                                        <div
+                                                            key={sIdx}
+                                                            style={{ top: `${topPx + 1}px`, height: `${heightPx - 2}px` }}
+                                                            className="absolute inset-x-1.5 rounded-xl bg-purple-50 text-primary px-2.5 py-2 shadow-2xs border border-purple-100 border-l-4 border-l-purple-600 flex flex-col justify-between overflow-hidden hover:z-20 hover:shadow-md transition-shadow"
+                                                        >
+                                                            <div>
+                                                                <div className="flex items-center justify-between gap-1">
+                                                                    <span className="text-[10px] font-bold text-purple-600 leading-none">
+                                                                        {session.time}
+                                                                    </span>
+                                                                    <span className="text-[9px] font-bold bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded leading-none shrink-0">
+                                                                        1:1
+                                                                    </span>
+                                                                </div>
+                                                                <div className="font-bold text-xs md:text-sm leading-tight text-primary mt-1">
+                                                                    {session.title}
+                                                                </div>
+                                                            </div>
+                                                            <div className="text-[10px] text-gray-600 font-medium truncate">
+                                                                {session.meta}
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 1. 그룹 랩 (Active Group Labs) */}
+                    <div className="mb-16">
+                        <div className="mb-6 pb-4 border-b border-slate-200">
+                            <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full mb-2">
+                                <Users className="w-3.5 h-3.5" />
+                                소수 정예 코호트 (정원 3–6명)
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-primary">그룹 랩 (Active Group Labs)</h3>
+                        </div>
+
+                        {/* 현재 재원생 소속 학교 배너 */}
+                        <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div className="flex items-center gap-2.5 shrink-0">
+                                <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 text-primary flex items-center justify-center shadow-2xs">
+                                    <GraduationCap className="w-4 h-4 text-blue-600" />
+                                </div>
+                                <span className="text-xs font-bold text-slate-600">
+                                    현재 코호트 재원생 소속 학교:
+                                </span>
+                            </div>
+                            <div className="flex flex-wrap gap-2">
+                                {[
+                                    "Spicewood Elementary",
+                                    "Canyon Vista Middle",
+                                    "Pearson Ranch Middle",
+                                    "Cedar Valley Middle",
+                                    "Westwood High",
+                                    "McNeil High",
+                                ].map((school, idx) => (
+                                    <span
+                                        key={idx}
+                                        className="text-xs font-semibold text-primary bg-white border border-slate-200 px-3 py-1 rounded-full shadow-2xs"
+                                    >
+                                        {school}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {koreanGroupLabs.map((lab, idx) => (
+                                <div
+                                    key={idx}
+                                    className="bg-blue-50 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                                >
+                                    <div>
+                                        <div className="flex items-center justify-between gap-2 mb-3">
+                                            <span className="text-xs font-bold text-blue-600 bg-blue-100 px-2.5 py-1 rounded-md">
+                                                {lab.grades}
+                                            </span>
+                                            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-white border border-blue-100 px-2.5 py-0.5 rounded-full">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                                                {lab.status}
+                                            </span>
+                                        </div>
+
+                                        <h4 className="text-2xl font-bold text-primary mb-1">{lab.name}</h4>
+                                        <p className="text-xs font-semibold text-blue-600 mb-3">{lab.subtitle}</p>
+                                        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                                            {lab.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-4 border-t border-blue-100 flex items-center justify-between gap-2 text-xs font-semibold">
+                                        <div className="inline-flex items-center gap-1.5 text-primary bg-white px-3 py-1.5 rounded-lg border border-blue-100">
+                                            <Calendar className="w-3.5 h-3.5 text-blue-600" />
+                                            <span>일정: <strong className="text-blue-600">{lab.schedule}</strong></span>
+                                        </div>
+                                        <div className="inline-flex items-center gap-1 text-gray-600">
+                                            <Clock className="w-3.5 h-3.5 text-gray-400" />
+                                            <span>{lab.duration}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* 2. 1:1 프라이빗 멘토링 (Private 1:1 Mentorship) */}
+                    <div>
+                        <div className="mb-6 pb-4 border-b border-slate-200">
+                            <div className="inline-flex items-center gap-2 text-xs font-bold text-purple-600 bg-purple-50 border border-purple-100 px-3 py-1 rounded-full mb-2">
+                                <UserCheck className="w-3.5 h-3.5 text-purple-600" />
+                                맞춤형 개별 진도 및 심화 연구
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-primary">1:1 프라이빗 멘토링 (현재 운영 현황)</h3>
+                        </div>
+
+                        {/* 로컬 명문고 내신(GPA) & AP 수학 맞춤 배너 */}
+                        <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-5 mb-8 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                            <div className="flex items-start sm:items-center gap-3">
+                                <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 text-primary flex items-center justify-center shadow-2xs shrink-0 mt-0.5 sm:mt-0">
+                                    <GraduationCap className="w-4 h-4 text-purple-600" />
+                                </div>
+                                <div>
+                                    <span className="text-xs font-bold text-primary block">
+                                        오스틴 명문 고교 학교별 내신(GPA) &amp; AP 수학 완벽 대비
+                                    </span>
+                                    <p className="text-xs text-slate-600 mt-0.5">
+                                        1:1 프라이빗 수업은 각 고등학교(Honors / AP)의 실제 진도, 시험 출제 경향 및 과제에 100% 맞춘 밀착 내신 관리로 진행됩니다:
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap gap-2 shrink-0">
+                                {["Westwood High", "McNeil High", "Vandegrift High"].map((school, idx) => (
+                                    <span
+                                        key={idx}
+                                        className="text-xs font-semibold text-primary bg-white border border-slate-200 px-3 py-1 rounded-full shadow-2xs"
+                                    >
+                                        {school}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {koreanPrivateRoster.map((item, idx) => (
+                                <div
+                                    key={idx}
+                                    className="bg-purple-50 rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                                >
+                                    <div>
+                                        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                            <span className="text-xs font-bold text-purple-600 bg-purple-100 px-2.5 py-1 rounded-md">
+                                                {item.grades}
+                                            </span>
+                                            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 bg-white border border-purple-100 px-3 py-1 rounded-full">
+                                                <GraduationCap className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                                                {item.school}
+                                            </span>
+                                        </div>
+                                        <h4 className="text-2xl font-bold text-primary mb-1">{item.course}</h4>
+                                        <p className="text-xs font-semibold text-purple-600 mb-3">{item.subtitle}</p>
+                                        <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                                            {item.focus}
+                                        </p>
+                                    </div>
+                                    <div className="pt-4 border-t border-purple-100 flex items-center justify-between gap-2 text-xs font-semibold">
+                                        <div className="inline-flex items-center gap-1.5 text-primary bg-white px-3 py-1.5 rounded-lg border border-purple-100">
+                                            <Calendar className="w-3.5 h-3.5 text-purple-600" />
+                                            <strong className="text-purple-600">{item.schedule}</strong>
+                                        </div>
+                                        <div className="inline-flex items-center gap-1 text-gray-600">
+                                            <Clock className="w-3.5 h-3.5 text-gray-400" />
+                                            <span>{item.duration}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* 학부모 실제 첫 수업 피드백 카드 */}
+                        <div className="mt-8 bg-white rounded-2xl p-6 md:p-8 border border-purple-100 border-l-4 border-l-purple-600 shadow-sm">
+                            <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 bg-purple-50 border border-purple-100 px-3 py-1 rounded-full">
+                                    첫 수업 후 학부모님 실제 피드백
+                                </span>
+                                <span className="text-xs font-semibold text-slate-400">
+                                    AP Calculus 1:1 프라이빗 멘토링 · Westwood High
+                                </span>
+                            </div>
+                            <blockquote className="text-slate-700 text-sm md:text-base leading-relaxed mb-4">
+                                &ldquo;선생님, 오늘 첫 수업 너무 좋았다고 합니다. 아이가 수학 수업 후에 저렇게 흥분해서 말하는 건 처음이네요. <strong className="text-primary font-semibold">&lsquo;컨셉(원리)이 이렇게 중요한지 몰랐다&rsquo;</strong>고, 선생님 설명을 듣는 순간 머리에서 팡팡 하고 이해되는 느낌을 받았다고 해요. <strong className="text-primary font-semibold">이제껏 안 풀렸던 문제들이 왜 그랬는지 비로소 이해되는 느낌</strong>이었다네요. 아이가 자기에게 너무나 필요했던 선생님을 만난 것 같다고 좋아합니다. 감사해요, 앞으로의 수업들이 기대됩니다.&rdquo;
+                            </blockquote>
+                            <div className="text-xs font-bold text-primary">
+                                — Westwood High · AP Calculus 1:1 멘토링 수강생 학부모님
+                            </div>
                         </div>
                     </div>
                 </div>
