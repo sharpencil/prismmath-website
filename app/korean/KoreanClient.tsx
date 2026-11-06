@@ -13,7 +13,6 @@ const koreanGroupLabs = [
         grades: "8–10학년",
         duration: "주 1회 90분",
         schedule: "토요일 오후 3:00 (Sat 3:00 PM)",
-        status: "모집 중",
         description: "AIME 합격을 목표로 대수·정수론·기하·조합론의 고난도 추론과 계산 지배력(Computational Dominance)을 훈련합니다.",
     },
     {
@@ -22,7 +21,6 @@ const koreanGroupLabs = [
         grades: "5–8학년",
         duration: "주 1회 75분",
         schedule: "금요일 오후 7:00 (Fri 7:00 PM)",
-        status: "모집 중",
         description: "고밀도 75분 수업 포맷으로 AMC 8 고득점 및 상위권 경시 수학의 핵심 문제해결 직관을 완성합니다.",
     },
     {
@@ -31,7 +29,6 @@ const koreanGroupLabs = [
         grades: "6–8학년",
         duration: "주 1회 75분",
         schedule: "화요일 오후 4:10 (Tue 4:10 PM)",
-        status: "모집 중",
         description: "Jacobs 교재를 기반으로 단순 문제풀이가 아닌 대학 수준의 대수적 원리 도출과 증명 사고력을 구축합니다.",
     },
     {
@@ -40,7 +37,6 @@ const koreanGroupLabs = [
         grades: "6–8학년",
         duration: "주 1회 75분",
         schedule: "수요일 오후 4:10 (Wed 4:10 PM)",
-        status: "모집 중",
         description: "교육청 Credit-by-Exam(CBE) 90점 이상 통과 및 성공적인 수학 월반을 위한 핵심 개념·실전 문제풀이 집중 과정입니다.",
     },
     {
@@ -49,7 +45,6 @@ const koreanGroupLabs = [
         grades: "5–7학년",
         duration: "주 1회 75분",
         schedule: "목요일 오후 4:10 (Thu 4:10 PM)",
-        status: "모집 중",
         description: "초등 연산에서 추상적인 중등 대수(Algebra)로 넘어가는 가장 중요한 시기에 빈틈없는 개념 체계를 완성합니다.",
     },
     {
@@ -58,7 +53,6 @@ const koreanGroupLabs = [
         grades: "4학년",
         duration: "주 1회 75분",
         schedule: "수요일 오후 5:45 (Wed 5:45 PM)",
-        status: "모집 중",
         description: "싱가포르 수학(Dimensions Math)의 시각적 모델링과 다단계 논리 추론을 통해 탄탄한 수리 사고력을 기릅니다.",
     },
 ];
@@ -340,13 +334,13 @@ export default function KoreanClient() {
                                             <p><strong className="text-white">카이스트</strong> 학사/석사 <span className="text-slate-400 block sm:inline sm:ml-1">(B.S./M.S., KAIST)</span></p>
                                             <p><strong className="text-white">버지니아 공대</strong> 박사 <span className="text-slate-400 block sm:inline sm:ml-1">(Ph.D., Virginia Tech)</span></p>
                                             <p>전 <strong className="text-white">텍사스 주립대</strong> 교수 <span className="text-slate-400 block sm:inline sm:ml-1">(Texas State)</span></p>
-                                            <p>현 <strong className="text-white">스파이스우드 초등</strong> 수학경시 클럽 코치</p>
+                                            <p>현 <strong className="text-white">스파이스우드 초등</strong> 수학 올림피아드 클럽 코치</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <p className="text-xs text-gray-400 italic text-center md:text-right leading-relaxed">
-                                내 아이를 가르치는 마음과 검증된 방법으로: 직접 지도하는 스파이스우드 초등 수학경시 클럽(Math Olympiad Club) 팀을 이끌고 2026 센트럴 텍사스 수학 경시대회 금메달을 목에 건 첫째와 함께.
+                                내 아이를 가르치는 마음과 검증된 방법으로: 2026 센트럴 텍사스 수학 경시대회에서 금메달(스파이스우드 초등팀)을 목에 건 첫째와 함께.
                             </p>
                         </motion.div>
                     </div>
@@ -412,7 +406,7 @@ export default function KoreanClient() {
                                 </ul>
                                 <div className="mt-4 bg-emerald-50/70 border border-emerald-100 border-l-4 border-l-emerald-600 rounded-xl p-4 text-sm text-slate-700">
                                     <p className="leading-relaxed">
-                                        <strong className="text-emerald-800">지역 명문초 수학경시 클럽 직접 지도 (Community Leadership):</strong> 류영 원장은 매주 수요일 방과 후(2:45–3:45 PM) <strong>스파이스우드 초등학교(Spicewood Elementary) Math Olympiad Club</strong>을 직접 지도하며, 지역 내 수학 영재들의 경시대회 입상과 수리 논리력 향상을 이끌고 있습니다.
+                                        <strong className="text-emerald-800">지역 명문초 수학 올림피아드 클럽 직접 지도 (Community Leadership):</strong> 류영 원장은 매주 수요일 방과 후(2:45–3:45 PM) <strong>스파이스우드 초등학교(Spicewood Elementary) 수학 올림피아드 클럽(Math Olympiad Club)</strong>을 직접 지도하며, 지역 내 수학 영재들의 경시대회 입상과 수리 논리력 향상을 이끌고 있습니다.
                                     </p>
                                 </div>
                             </div>
@@ -632,7 +626,7 @@ export default function KoreanClient() {
                             <div className="flex flex-wrap items-center gap-2.5 text-xs font-semibold">
                                 <span className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-600 border border-blue-100 px-3 py-1.5 rounded-lg shadow-2xs">
                                     <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    그룹 랩 (모집 중)
+                                    그룹 랩
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 bg-purple-50 text-purple-600 border border-purple-100 px-3 py-1.5 rounded-lg shadow-2xs">
                                     <span className="w-2 h-2 rounded-full bg-purple-600"></span>
@@ -640,7 +634,7 @@ export default function KoreanClient() {
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-100 px-3 py-1.5 rounded-lg shadow-2xs">
                                     <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-                                    학교 경시 클럽 지도
+                                    학교 수학 올림피아드 클럽 지도
                                 </span>
                                 <span className="inline-flex items-center gap-1.5 bg-white text-slate-600 border border-dashed border-slate-300 px-3 py-1.5 rounded-lg shadow-2xs">
                                     <span className="w-2.5 h-2.5 rounded-xs border border-dashed border-slate-400 bg-slate-50"></span>
@@ -838,10 +832,6 @@ export default function KoreanClient() {
                                         <div className="flex items-center justify-between gap-2 mb-3">
                                             <span className="text-xs font-bold text-blue-600 bg-blue-100 px-2.5 py-1 rounded-md">
                                                 {lab.grades}
-                                            </span>
-                                            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-white border border-blue-100 px-2.5 py-0.5 rounded-full">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                                                {lab.status}
                                             </span>
                                         </div>
 
