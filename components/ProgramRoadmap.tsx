@@ -29,7 +29,7 @@ const series = [
         grades: "Grades 7-9",
         icon: Brain,
         color: "from-green-400 to-green-600",
-        description: "Rigorous Algebra I and Geometry sequences standardized to elite university requirements.",
+        description: "Rigorous Algebra I and Geometry sequences using Glencoe as the primary school-aligned text and Jacobs for deep deductive proof.",
         href: "/programs/structural"
     },
     {

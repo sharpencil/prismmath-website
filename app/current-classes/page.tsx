@@ -45,7 +45,7 @@ const activeGroupLabs = [
         duration: "75 Min / Week",
         schedule: "Tuesdays, 4:10 PM",
         status: "Open / Enrolling",
-        description: "University-track foundational algebra (Jacobs Elementary Algebra) emphasizing proof-based derivation over rote memorization.",
+        description: "School-aligned foundational algebra (Glencoe Algebra 1 & Jacobs Elementary Algebra) emphasizing proof-based derivation over rote memorization.",
     },
     {
         name: "Algebra 1 CBE Prep",
@@ -55,15 +55,6 @@ const activeGroupLabs = [
         schedule: "Wednesdays, 4:10 PM",
         status: "Open / Enrolling",
         description: "Targeted mastery and test-readiness for students preparing to place out of Algebra 1 via district Credit-by-Exam (CBE) with a 90%+ score.",
-    },
-    {
-        name: "Prealgebra",
-        track: "The Bridge Series",
-        grades: "Grades 5–7",
-        duration: "75 Min / Week",
-        schedule: "Thursdays, 4:10 PM",
-        status: "Open / Enrolling",
-        description: "Transitional mastery from arithmetic architecture to abstract algebraic reasoning (Dimensions Math 6 / AoPS Prealgebra).",
     },
     {
         name: "Junior Lab 4",
@@ -237,17 +228,7 @@ const weeklyCalendar = [
     {
         dayShort: "THU",
         dayFull: "Thursday",
-        sessions: [
-            {
-                startHour: 16,
-                startMin: 10,
-                durationMin: 75,
-                time: "4:10 – 5:25 PM",
-                title: "Prealgebra",
-                type: "group" as const,
-                meta: "Group Lab · Grades 5–7",
-            },
-        ],
+        sessions: [],
     },
     {
         dayShort: "FRI",

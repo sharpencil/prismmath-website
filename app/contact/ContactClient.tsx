@@ -118,7 +118,6 @@ export default function Contact() {
                                             { name: "AMC 8", detail: "75 Min/Wk · Grades 5–8", schedule: "Fri, 7:00 PM" },
                                             { name: "Algebra 1", detail: "75 Min/Wk · Grades 6–8", schedule: "Tue, 4:10 PM" },
                                             { name: "Algebra 1 CBE Prep", detail: "75 Min/Wk · Grades 6–8", schedule: "Wed, 4:10 PM" },
-                                            { name: "Prealgebra", detail: "75 Min/Wk · Grades 5–7", schedule: "Thu, 4:10 PM" },
                                             { name: "Junior Lab 4", detail: "75 Min/Wk · Grade 4", schedule: "Wed, 5:45 PM" },
                                         ].map((lab, idx) => (
                                             <div

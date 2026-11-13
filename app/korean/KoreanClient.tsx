@@ -29,7 +29,7 @@ const koreanGroupLabs = [
         grades: "6–8학년",
         duration: "주 1회 75분",
         schedule: "화요일 오후 4:10 (Tue 4:10 PM)",
-        description: "Jacobs 교재를 기반으로 단순 문제풀이가 아닌 대학 수준의 대수적 원리 도출과 증명 사고력을 구축합니다.",
+        description: "로컬 학교 주교재인 Glencoe Algebra 1과 부교재 Jacobs를 기반으로 내신·CBE 완벽 대비는 물론 대수적 원리 도출과 증명 사고력을 구축합니다.",
     },
     {
         name: "Algebra 1 CBE Prep",
@@ -38,14 +38,6 @@ const koreanGroupLabs = [
         duration: "주 1회 75분",
         schedule: "수요일 오후 4:10 (Wed 4:10 PM)",
         description: "교육청 Credit-by-Exam(CBE) 90점 이상 통과 및 성공적인 수학 월반을 위한 핵심 개념·실전 문제풀이 집중 과정입니다.",
-    },
-    {
-        name: "Prealgebra",
-        subtitle: "The Bridge Series · 중등 대수 코어",
-        grades: "5–7학년",
-        duration: "주 1회 75분",
-        schedule: "목요일 오후 4:10 (Thu 4:10 PM)",
-        description: "초등 연산에서 추상적인 중등 대수(Algebra)로 넘어가는 가장 중요한 시기에 빈틈없는 개념 체계를 완성합니다.",
     },
     {
         name: "Junior Lab 4",
@@ -218,17 +210,7 @@ const koreanWeeklyCalendar = [
     {
         dayShort: "THU",
         dayKor: "목요일",
-        sessions: [
-            {
-                startHour: 16,
-                startMin: 10,
-                durationMin: 75,
-                time: "4:10 – 5:25 PM",
-                title: "Prealgebra",
-                type: "group" as const,
-                meta: "그룹 랩 · 5–7학년",
-            },
-        ],
+        sessions: [],
     },
     {
         dayShort: "FRI",
@@ -541,8 +523,8 @@ export default function KoreanClient() {
                                 <span className="text-accent">최상위 커리큘럼</span>
                             </h2>
                             <p className="text-slate-300 text-lg leading-relaxed">
-                                시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 명문 학군 고등학교와 대학 과정에서 채택하는
-                                Jacobs, Glencoe, Foerster, Finney Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
+                                시중의 가벼운 문제집(Worksheets)이 아닙니다. PRISMMath는 명문 학군 중·고등학교와 대학 과정에서 채택하는
+                                Glencoe, Jacobs, Foerster, Finney Calculus 등의 교과서를 기반으로 깊이 있는 개념을 지도합니다. (Programs 메뉴 참조)
                             </p>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
@@ -557,10 +539,12 @@ export default function KoreanClient() {
                         </div>
 
                         <div className="relative mt-8 md:mt-0">
-                            <div className="grid grid-cols-4 sm:grid-cols-4 gap-3">
+                            <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
                                 {[
                                     { title: "Dimensions Math 6A/6B", image: "/images/textbooks/dimensions-math-6a-6b.jpg" },
+                                    { title: "Glencoe Algebra 1", image: "/images/textbooks/glencoe_algebra1.jpg" },
                                     { title: "Elementary Algebra", image: "/images/textbooks/jacobs_algebra.jpg" },
+                                    { title: "Glencoe Geometry", image: "/images/textbooks/glencoe_geometry.jpg" },
                                     { title: "Geometry", image: "/images/textbooks/jacobs-geometry.jpg" },
                                     { title: "Glencoe Algebra 2", image: "/images/textbooks/glencoealgebra2.jpg" },
                                     { title: "Algebra and Trigonometry: Functions and Applications", image: "/images/textbooks/foerster_algebra2.jpg" },
